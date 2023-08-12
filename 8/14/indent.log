@@ -1,0 +1,26 @@
+INFO:  latexindent.exe version 3.19, 2022-10-30, a script to indent .tex files
+       latexindent.exe lives here: C:/texlive/2022/bin/win32/
+       Fri Aug 11 11:34:29 2023
+       Filename: c:/Users/philo/OneDrive/Desktop/Calculus-I-Slides/8/14/__latexindent_temp_main.tex
+INFO:  Processing switches:
+       -y|--yaml: YAML settings specified via command line
+       -c|--cruft: cruft directory
+INFO:  Directory for backup files and c:/Users/philo/OneDrive/Desktop/Calculus-I-Slides/8/14//indent.log:
+       c:/Users/philo/OneDrive/Desktop/Calculus-I-Slides/8/14/
+INFO:  YAML settings read: defaultSettings.yaml
+       Reading defaultSettings.yaml from C:/texlive/2022/bin/win32/defaultSettings.yaml
+       Reading defaultSettings.yaml (2nd attempt) from C:/texlive/2022/bin/win32/../../texmf-dist/scripts/latexindent/defaultSettings.yaml
+       and then, if necessary, C:/texlive/2022/bin/win32/LatexIndent/defaultSettings.yaml
+INFO:  YAML settings read: indentconfig.yaml or .indentconfig.yaml
+       Home directory is C:\Users\philo (didn't find either indentconfig.yaml or .indentconfig.yaml)
+       To specify user settings you would put indentconfig.yaml here: C:\Users\philo/indentconfig.yaml
+       Alternatively, you can use the hidden file .indentconfig.yaml as: C:\Users\philo/.indentconfig.yaml
+INFO:  YAML settings read: -y switch
+       YAML setting: defaultIndent:'\t'
+       single-quoted string found in -y switch: '\t', substitute to 	
+       Updating mainSettings with defaultIndent: 	
+FATAL I couldn't find c:/Users/philo/OneDrive/Desktop/Calculus-I-Slides/8/14/__latexindent_temp_main.tex, are you sure it exists?
+      Exiting, no indendation done.
+       --------------
+INFO:  Please direct all communication/issues to:
+        https://github.com/cmhughes/latexindent.pl
