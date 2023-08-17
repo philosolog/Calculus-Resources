@@ -12,6 +12,8 @@
 \usepackage{longtable}
 \usepackage{xcolor}
 \usepackage{gensymb}
+\usepackage{pgfplots}
+\usepackage[demo]{graphicx}
 
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 \begin{document}
@@ -36,10 +38,11 @@
 	\frametitle{Exercise}
 	\vspace*{\fill}
 	\vspace*{\fill}
-	\vspace*{\fill}
-	\vspace*{\fill}
 	\initclock
-	test 1\\
+	$f(x) = 3x^2+8x+1$ and $h\neq0$\\
+	\vspace*{\fill}
+	\vspace*{\fill}
+	Evaluate: \[\frac{f(a+h)-f(a)}{h}\]\\
 	\vspace*{\fill}
 	\vspace*{\fill}
 	\vspace*{\fill}
@@ -51,12 +54,36 @@
 	\frametitle{Exercise}
 	\vspace*{\fill}
 	\vspace*{\fill}
+	\begin{minipage}{.5\textwidth}
+		$
+			f(x) =
+			\begin{cases}
+				x+2 & x \leq 0\\
+				-\frac{1}{2}+2 & 100>x
+			\end{cases}
+		$
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+		\begin{tikzpicture}[declare function={g(\x)=\x<0 ? x+2 : (\x>0 ? -0.5*x+2 : inf);}]
+			\begin{axis}[unbounded coords=jump,
+					grid=both,
+					grid style={line width=0.35pt, draw=gray!75},
+					axis lines=center,
+					axis line style={-},
+					xmin=-5, xmax=5,
+					ymin=-5, ymax=5,
+					ticklabel style={font=\footnotesize,inner sep=0.5pt,fill=white,opacity=1.0, text opacity=1},
+					every axis plot/.append style={line width=0.95pt, color=red, samples=500},
+					scale=0.75
+				]
+				\addplot[samples at={-5,-0.01,0,0.01,5}] {g(x)};
+			\end{axis}
+		\end{tikzpicture}
+	\end{minipage}
 	\vspace*{\fill}
-	\vspace*{\fill}
-	\initclock
-	test 2\\
-	\vspace*{\fill}
-	\vspace*{\fill}
+	\begin{center}
+		Evaluate: $f(-3), f(-2), f(2), f(0)$\\
+	\end{center}
 	\vspace*{\fill}
 	\vspace*{\fill}
 	\crono
