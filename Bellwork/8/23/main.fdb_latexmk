@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1692788741 "c:/Users/philo/Desktop/Calculus-Resources/Bellwork/8/23/main.tex" "main.pdf" "main" 1692788744
-  "c:/Users/philo/Desktop/Calculus-Resources/Bellwork/8/23/main.tex" 1692788741 1378 706ad41bf293a85244176ec6a6223314 ""
+["pdflatex"] 1692788961 "c:/Users/philo/Desktop/Calculus-Resources/Bellwork/8/23/main.tex" "main.pdf" "main" 1692788964
+  "c:/Users/philo/Desktop/Calculus-Resources/Bellwork/8/23/main.tex" 1692788961 1420 3e37755acecbfef51c3547fb2af10b66 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1667142952 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1667155006 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1667137623 1004 54797486969f23fa377b128694d548df ""
@@ -265,10 +265,10 @@
   "c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1667155102 4648419 cd736d89bc726120ec8d74e8e9beb636 ""
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1667155162 3058733 ce7179b7fcbe78910bcde349723d0baf ""
   "c:/texlive/2022/texmf.cnf" 1667155083 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1692788744 1603 5b5b40017ba33cec0463668f044fde89 "pdflatex"
-  "main.nav" 1692788744 307 9e520c26371a1250ff9fc1fe87f9c655 "pdflatex"
+  "main.aux" 1692788964 1603 5b5b40017ba33cec0463668f044fde89 "pdflatex"
+  "main.nav" 1692788964 307 9e520c26371a1250ff9fc1fe87f9c655 "pdflatex"
   "main.out" 0 -1 0 "pdflatex"
-  "main.tex" 1692788741 1378 706ad41bf293a85244176ec6a6223314 ""
+  "main.tex" 1692788961 1420 3e37755acecbfef51c3547fb2af10b66 ""
   (generated)
   "main.aux"
   "main.log"
