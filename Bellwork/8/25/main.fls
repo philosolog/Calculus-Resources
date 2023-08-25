@@ -1,8 +1,8 @@
-PWD c:/Users/philo/Desktop/Calculus-Resources/Bellwork/8/25
+PWD c:/Users/philo/OneDrive/Desktop/Calculus-Resources/Bellwork/8/25
 INPUT c:/texlive/2022/texmf.cnf
 INPUT c:/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/philo/Desktop/Calculus-Resources/Bellwork/8/25/main.tex
+INPUT c:/Users/philo/OneDrive/Desktop/Calculus-Resources/Bellwork/8/25/main.tex
 OUTPUT main.log
 INPUT c:/texlive/2022/texmf-dist/tex/latex/beamer/beamer.cls
 INPUT c:/texlive/2022/texmf-dist/tex/latex/beamer/beamer.cls

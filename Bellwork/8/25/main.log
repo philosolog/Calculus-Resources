@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.30)  25 AUG 2023 06:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.1)  25 AUG 2023 10:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/philo/Desktop/Calculus-Resources/Bellwork/8/25/main.tex
-(c:/Users/philo/Desktop/Calculus-Resources/Bellwork/8/25/main.tex
+**c:/Users/philo/OneDrive/Desktop/Calculus-Resources/Bellwork/8/25/main.tex
+(c:/Users/philo/OneDrive/Desktop/Calculus-Resources/Bellwork/8/25/main.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-10-26> (c:/texlive/2022/texmf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2022/09/13 v3.68 A class for typesetting presentations
@@ -842,14 +842,14 @@ Package rerunfilecheck Info: File `main.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  22531 strings out of 475066
- 439650 string characters out of 5782772
- 769828 words of memory out of 5000000
+ 439677 string characters out of 5782773
+ 769829 words of memory out of 5000000
  43439 multiletter control sequences out of 15000+600000
  476370 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,15n,122p,481b,716s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,122p,490b,716s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on main.pdf (1 page, 58585 bytes).
+Output written on main.pdf (1 page, 58335 bytes).
 PDF statistics:
  154 PDF objects out of 1000 (max. 8388607)
  90 compressed objects within 1 object stream
