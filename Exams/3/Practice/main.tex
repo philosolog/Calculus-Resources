@@ -11,7 +11,6 @@
 \usepackage{enumitem}
 \usepackage{multicol}
 
-
 \pagestyle{headandfoot}
 \firstpageheader{AP Calc. AB - Exam 3 Practice Problems\\ Exam date: September 7}{}{Name: \underline{\hspace{2.5in}}}
 \runningheader{AP Calc. AB - Exam 3 Practice Problems}{}{Page \thepage\ of \numpages}
@@ -20,11 +19,25 @@
 \runningfooter{}{}{}
 \begin{document}
 \begin{questions}
-    \question For each circle, find its (i) center, (ii) radius, and (iii) equation for the (left/right/top/bottom) specified semicircle.
-    \begin{parts}
-        \part $x^2 - 12x + y^2 - 4y = -15$
-        \part $x^2 + y^2 + 6x + 6y = 31$
-        \part $4x + y^2 + x^2 = 45$
-    \end{parts}
+	\question Using the table above, evaluate the following: % TODO: Try and move the table below?
+	\begin{table}[]
+		\begin{tabular}{|l|l|l|l|l|l|l|}
+			\hline
+			x$\quad$$\quad$ & $\quad$1$\quad$ & $\quad$2$\quad$ & $\quad$3$\quad$ & $\quad$4$\quad$ & $\quad$5$\quad$ & $\quad$6$\quad$ \\ \hline
+			$f(x)$          & $\quad$2$\quad$ & $\quad$4$\quad$ & $\quad$4$\quad$ & $\quad$6$\quad$ & $\quad$3$\quad$ & $\quad$1$\quad$ \\ \hline
+			$g(x)$          & $\quad$1$\quad$ & $\quad$1$\quad$ & $\quad$1$\quad$ & $\quad$5$\quad$ & $\quad$2$\quad$ & $\quad$5$\quad$ \\ \hline
+			$h(x)$          & $\quad$4$\quad$ & $\quad$4$\quad$ & $\quad$3$\quad$ & $\quad$1$\quad$ & $\quad$2$\quad$ & $\quad$2$\quad$ \\ \hline
+		\end{tabular}
+	\end{table}
+	\begin{multicols}{2}
+		\begin{parts}
+			\part $f(h(f(1)))\div (f\circ g)(2)$
+			\part $(h\circ g \circ f)(5)$
+			\part $g(f(3))-h(h(2))$
+			\part $(f\circ g)(h(f(4)))$
+		\end{parts}
+	\end{multicols}
+
+	\question From the graphs of $f$, $g$, and $h$, estimate the value of $g(f(h(x))$ for $\{x\hspace{0.125cm}\epsilon\hspace{0.125cm}\mathbb{Z} \mid -3\leq x\leq 3\}$. % TODO: Add the graph...
 \end{questions}
 \end{document}
