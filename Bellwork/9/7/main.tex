@@ -17,33 +17,61 @@
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 \begin{document}
 \begin{frame}
-	\frametitle{Wednesday 9/7 Bellwork (5 Minutes)}
+	\frametitle{Bellwork 9/7}
+	\vspace*{\fill}
 	\vspace*{\fill}
 	\initclock
 	Find the slope of the tangent line to $f(x)=x^2$ at $(-2,4)$ by approximating with secant lines.\\
+	\vspace*{\fill}
 	\[P = (-2, 4),\hspace{0.125cm}Q = (x, x^2)\]\\
 	\[m_{PQ}=\frac{x^2-4}{x-(-2)}\]\\
-	% TODO: Table
-	\vspace*{\fill}
-	\vspace*{\fill}
-	\vspace*{\fill}
-	\vspace*{\fill}
+	\begin{table}[]
+		\begin{tabular}{l|l|l|l|l|l}
+			\quad x  & \hspace{5px} 0 \hspace{5px} & -1 \quad & -1.5 \quad & -1.9 \quad & -1.99 \quad \\ \hline
+			$m_{PQ}$ &                             &          &            &            &             \\
+			         &                             &          &            &            &
+		\end{tabular}
+	\end{table}
 	\vspace*{\fill}
 	\vspace*{\fill}
 	\crono
 	\resetcrono{\beamerbutton{reset}}
 \end{frame}
 \begin{frame}
-	\frametitle{Exercise}
+	\frametitle{Bellwork 9/7 - Solutions}
 	\vspace*{\fill}
+	\[P = (-2, 4),\hspace{0.125cm}Q = (x, x^2)\]\\
+	\[m_{PQ}=\frac{x^2-4}{x-(-2)}\]\\
+	\begin{table}[]
+		\begin{tabular}{l|l|l|l|l|l}
+			\quad x  & \hspace{5px} $0$ \hspace{5px} & $-1$ \quad & $-1.5$ \quad & $-1.9$ \quad & $-1.99$ \quad \\ \hline
+			$m_{PQ}$ & $-2$                          & $-3$       & $-3.5$       & $-3.9$       & $-3.99$
+		\end{tabular}
+	\end{table}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\[\implies \text{The slope of the tangent line to $f$ at $(-2, 4)$ is $\boxed{-4}$.}\]
+	\vspace*{\fill}
+	\vspace*{\fill}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1}
 	\vspace*{\fill}
 	\initclock
+	If a rock is thrown upward on the planet Mars with a velocity of 10 $\tfrac{m}{s}$, its height in meters $t$ seconds later is given by $y=10t-1.86t^2$.
+	\vspace*{\fill}
+	\vspace*{\fill}
 	\begin{enumerate}
-		\item Find the average velocity for the time period beginning when $t=2$ and lasting \begin{multicols}{3}
-			\begin{enumerate}
-				\item 
-			\end{enumerate}
-		\end{multicols}
+		\item Find the average velocity over the given time intervals:
+		      \begin{multicols}{3}
+			      \begin{enumerate}
+				      \item $[1, 1.1]$
+				      \item $[1, 1.01]$
+				      \item $[1, 1.001]$
+			      \end{enumerate}
+		      \end{multicols}
+		      \vspace*{\fill}
+		\item Estimate the instantaneous velocity when $t=1$.
 	\end{enumerate}
 	\vspace*{\fill}
 	\vspace*{\fill}
@@ -53,17 +81,51 @@
 	\resetcrono{\beamerbutton{reset}}
 \end{frame}
 \begin{frame}
-	\frametitle{Exercise}
+	\frametitle{Exercise 1 - Solutions}
 	\vspace*{\fill}
+	\vspace*{\fill}
+	\begin{enumerate}
+		\item
+		      \begin{multicols}{3}
+			      \begin{enumerate}
+				      \item $6.094\tfrac{m}{s}$
+				      \item $6.2614\tfrac{m}{s}$
+				      \item $6.27814\tfrac{m}{s}$
+			      \end{enumerate}
+		      \end{multicols}
+		      \vspace*{\fill}
+		\item $6.28\tfrac{m}{s}$
+	\end{enumerate}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\vspace*{\fill}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2}
 	\vspace*{\fill}
 	\initclock
-	For each function, evaluate: \[\frac{f(a+h)-f(a)}{h}\]\\
+	The table below shows the position of a motorcyclist after accelerating from rest.
+	\begin{table}[]
+		\begin{tabular}{l|l|l|l|l|l|l|l}
+			t (seconds) & 0 & 1   & 2    & 3    & 4    & 5     & 6     \\ \hline
+			s (feet)    & 0 & 4.9 & 20.6 & 46.5 & 79.2 & 124.8 & 176.7
+		\end{tabular}
+	\end{table}
+	\vspace*{\fill}
+	\vspace*{\fill}
 	\begin{enumerate}
-		\item $f(x) = x^2 + 3x$
+		\item Find the average velocity for each time period:
+		      \begin{multicols}{4}
+			      \begin{enumerate}
+				      \item $[2, 4]$
+				      \item $[3, 4]$
+				      \item $[4, 5]$
+				      \item $[4, 6]$
+			      \end{enumerate}
+		      \end{multicols}
 		      \vspace*{\fill}
-		\item $f(x) = x + 2$
-		      \vspace*{\fill}
-		\item $f(x) = 2x$
+		\item Use the graph of $s$ as a function of $t$ to estimate the instantaneous velocity when $t=3$.
 	\end{enumerate}
 	\vspace*{\fill}
 	\vspace*{\fill}
@@ -71,5 +133,27 @@
 	\vspace*{\fill}
 	\crono
 	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2 - Solutions}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\begin{enumerate}
+		\item
+		      \begin{multicols}{4}
+			      \begin{enumerate}
+				      \item $29.3\tfrac{ft}{s}$
+				      \item $32.7\tfrac{ft}{s}$
+				      \item $45.6\tfrac{ft}{s}$
+				      \item $48.75\tfrac{ft}{s}$
+			      \end{enumerate}
+		      \end{multicols}
+		      \vspace*{\fill}
+		\item $29.68\tfrac{ft}{s}$
+	\end{enumerate}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\vspace*{\fill}
 \end{frame}
 \end{document}
