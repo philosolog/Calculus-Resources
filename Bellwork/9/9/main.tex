@@ -1,0 +1,122 @@
+\documentclass[12pt]{beamer}
+\usetheme{Warsaw}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[font=Times,timeinterval=1,timeduration=2.0,timedeath=0,fillcolorwarningsecond=white!60!yellow,timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{gensymb}
+\usepackage{pgfplots}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\begin{document}
+\begin{frame}
+	\frametitle{Bellwork 9/9}
+	\vspace*{\fill}
+	\initclock
+	If a rock is thrown upward on the planet Mars with a velocity of 10 $\tfrac{m}{s}$, its height in meters $t$ seconds later is given by $y=10t-1.86t^2$.
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\begin{enumerate}
+		\item Find the average velocity over the given time intervals:
+		      \begin{multicols}{3}
+			      \begin{enumerate}
+				      \item $[1, 1.1]$
+				      \item $[1, 1.01]$
+				      \item $[1, 1.001]$
+			      \end{enumerate}
+		      \end{multicols}
+		      \vspace*{\fill}
+		\item Estimate the instantaneous velocity when $t=1$.
+	\end{enumerate}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\crono
+	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame}
+	\frametitle{Bellwork 9/9 - Solutions}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\begin{enumerate}
+		\item
+		      \begin{multicols}{3}
+			      \begin{enumerate}
+				      \item $6.094\tfrac{m}{s}$
+				      \item $6.2614\tfrac{m}{s}$
+				      \item $6.27814\tfrac{m}{s}$
+			      \end{enumerate}
+		      \end{multicols}
+		      \vspace*{\fill}
+		\item $6.28\tfrac{m}{s}$
+	\end{enumerate}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\vspace*{\fill}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1}
+	\initclock
+	\large
+	\begin{enumerate}
+		\item Graph $f(x) = \frac{1-\cos(x)}{x}$ on a calculator.
+		      \vspace*{\fill}
+		      \vspace*{\fill}
+		\item Fill in the table:
+		      \small
+		      \begin{table}[]
+			      \begin{tabular}{l|l}
+				      \quad x & $f(x)$ \\ \hline
+				      0.5     &        \\
+				      0.1     &        \\
+				      0.01    &        \\
+				      0.001   &
+			      \end{tabular}
+		      \end{table}
+		      \large
+		      \vspace*{\fill}
+		      \vspace*{\fill}
+		\item Estimate $\displaystyle\lim_{x\to 0}\left[\frac{1-\cos(x)}{x}\right]$
+	\end{enumerate}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\crono
+	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1 - Solutions}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\begin{enumerate}
+		\item \begin{center}
+			\begin{tikzpicture}
+				\begin{axis}
+				[
+					xlabel={x}, 
+					ylabel={y}, 
+					axis lines=center
+				]
+				\addplot[no marks, smooth, domain=-4:4, samples=100] {(1-cos(x))/x};
+				
+				\end{axis}
+				\end{tikzpicture}
+				
+		\end{center}
+	\end{enumerate}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\vspace*{\fill}
+\end{frame}
+\end{document}
