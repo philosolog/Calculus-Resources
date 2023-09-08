@@ -14,14 +14,19 @@
 \usepackage{gensymb}
 \usepackage{pgfplots}
 
+\pgfplotsset{
+	soldot/.style={color=black,only marks,mark=*},
+	holdot/.style={color=black,fill=white,only marks,mark=*},
+	compat=1.12
+}
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 \begin{document}
 \begin{frame}
 	\frametitle{Bellwork 9/9}
 	\vspace*{\fill}
-	\initclock
-	If a rock is thrown upward on the planet Mars with a velocity of 10 $\tfrac{m}{s}$, its height in meters $t$ seconds later is given by $y=10t-1.86t^2$.
 	\vspace*{\fill}
+	\initclock
+	If a rock is thrown upward on the planet Mars with a velocity of 10 $\tfrac{m}{s}$, its height in meters $t$ seconds later is given by: \[y=10t-1.86t^2\]
 	\vspace*{\fill}
 	\begin{enumerate}
 		\item Find the average velocity over the given time intervals:
@@ -74,12 +79,12 @@
 		\item Fill in the table:
 		      \small
 		      \begin{table}[]
-			      \begin{tabular}{l|l}
-				      \quad x & $f(x)$ \\ \hline
-				      0.5     &        \\
-				      0.1     &        \\
-				      0.01    &        \\
-				      0.001   &
+			      \begin{tabular}{c|c}
+				      $x$     & $f(x)$ \\ \hline
+				      0.5   &        \\
+				      0.1   &        \\
+				      0.01  &        \\
+				      0.001 &
 			      \end{tabular}
 		      \end{table}
 		      \large
@@ -100,23 +105,126 @@
 	\vspace*{\fill}
 	\begin{enumerate}
 		\item \begin{center}
-			\begin{tikzpicture}
-				\begin{axis}
-				[
-					xlabel={x}, 
-					ylabel={y}, 
-					axis lines=center
-				]
-				\addplot[no marks, smooth, domain=-4:4, samples=100] {(1-cos(x))/x};
-				
-				\end{axis}
-				\end{tikzpicture}
-				
-		\end{center}
+			      \begin{tikzpicture}
+				      \begin{axis}
+					      [
+						      xlabel={x},
+						      ylabel={y},
+						      scale only axis,
+						      xmin=-2,
+						      xmax=2,
+						      ymin=-2,
+						      ymax=2,
+						      xtick={-2,-1,...,2},
+						      ytick={-2,-1,...,2},
+						      axis lines=center
+					      ]
+					      \addplot[no marks, domain=-4:4, samples=100] {(1-cos(\x r))/x};
+					      \addplot[holdot] coordinates{(0,0)};
+				      \end{axis}
+			      \end{tikzpicture}
+
+		      \end{center}
 	\end{enumerate}
 	\vspace*{\fill}
 	\vspace*{\fill}
 	\vspace*{\fill}
 	\vspace*{\fill}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1 - Solutions} % ?: Should I specify ", Continued" here?
+	\begin{multicols}{2}
+		\begin{enumerate}
+			\setcounter{enumi}{1}
+			\large
+
+			\item \begin{table}[]
+				      \begin{tabular}{c|c}
+					      $x$     & $f(x)$ \\ \hline
+					      -0.1  & -0.05  \\
+					      -0.01 & -0.005 \\
+					      0.01  & 0.005  \\
+					      0.1   & 0.05
+				      \end{tabular}
+			      \end{table}
+			\item From the table, \[\displaystyle\lim_{x\to 0}\left[\frac{1-\cos(x)}{x}\right]\approx \boxed{0}\]
+		\end{enumerate}
+	\end{multicols}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2}
+	\initclock
+	\large
+	\begin{enumerate}
+		\item Graph $f(x) = \frac{x^2-9}{x+3}$ on a calculator.
+		      \vspace*{\fill}
+		      \vspace*{\fill}
+		\item Fill in the table:
+		      \small
+		      \begin{table}[]
+			      \begin{tabular}{c|c}
+				      $x$     & $f(x)$ \\ \hline
+				      -3.1  &        \\
+				      -3.01 &        \\
+				      -2.99 &        \\
+				      -2.9  &
+			      \end{tabular}
+		      \end{table}
+		      \large
+		      \vspace*{\fill}
+		      \vspace*{\fill}
+		\item Estimate $\displaystyle\lim_{x\to -3}\left(\frac{x^2-9}{x+3}\right)$
+	\end{enumerate}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\crono
+	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2 - Solutions}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\begin{enumerate}
+		\item \begin{center}
+			      \begin{tikzpicture}
+				      \begin{axis}
+					      [
+						      xlabel={x},
+						      ylabel={y},
+						      axis lines=center
+					      ]
+					      \addplot[no marks, domain=-4:4, samples=100] {(x^2-9)/(x+3)};
+					      \addplot[holdot] coordinates{(-3,-6)};
+				      \end{axis}
+			      \end{tikzpicture}
+
+		      \end{center}
+	\end{enumerate}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\vspace*{\fill}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2 - Solutions} % ?: Should I specify ", Continued" here as well?
+	\begin{multicols}{2}
+		\begin{enumerate}
+			\setcounter{enumi}{1}
+			\large
+
+			\item \begin{table}[]
+				      \begin{tabular}{c|c}
+					      $x$       & $f(x)$ \\ \hline
+					      -3.1    & -6.1  \\
+					      -3.01   & -6.01 \\
+					      -2.99   & -5.99  \\
+					      -2.90.1 & -5.9
+				      \end{tabular}
+			      \end{table}
+			\item From the table, \[\displaystyle\lim_{x\to -3}\left(\frac{x^2-9}{x+3}\right)\approx \boxed{-6}\]
+		\end{enumerate}
+	\end{multicols}
 \end{frame}
 \end{document}
