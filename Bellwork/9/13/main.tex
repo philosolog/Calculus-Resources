@@ -1,0 +1,89 @@
+\documentclass[12pt]{beamer}
+\usetheme{Warsaw}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[font=Times,timeinterval=1,timeduration=2.0,timedeath=0,fillcolorwarningsecond=white!60!yellow,timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{gensymb}
+\usepackage{pgfplots}
+
+\graphicspath{ {./references/} }
+\pgfplotsset{
+	soldot/.style={color=black,only marks,mark=*},
+	holdot/.style={color=black,fill=white,only marks,mark=*},
+	compat=1.12
+}
+\newcolumntype{Y}{>{\centering\arraybackslash}X} % *: Beamer enumeration spacing-workaround..
+\makeatletter
+\def\@listii{\leftmargin\leftmarginii
+			  \topsep    2ex
+			  \parsep    0\p@   \@plus\p@
+			  \itemsep   \parsep}
+\makeatother
+
+\begin{document}
+\begin{frame}
+	\frametitle{Bellwork 9/13}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\initclock
+	\begin{enumerate}
+		\item Evaluate \[\displaystyle\lim_{x\to5}\left(\frac{x^2+x-30}{5-x}\right)\]
+		\item Find $\displaystyle\lim_{x\to0}f(x)$ where
+		      \[
+			      f(x) =
+			      \begin{cases}
+				      \sqrt{4-x} & \text{if } x < 0    \\
+				      x+2        & \text{if } x \geq 0 \\
+			      \end{cases}
+		      \]\\
+	\end{enumerate}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\crono
+	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame}
+	\frametitle{Bellwork 9/13 - Solutions}
+	\begin{enumerate}\itemsep2ex
+		\item $\displaystyle\lim_{x\to5}\left(\frac{x^2+x-30}{5-x}\right)=\boxed{-11}$
+		\item
+		      \[
+			      f(x) =
+			      \begin{cases}
+				      \sqrt{4-x} & \text{if } x < 0    \\
+				      x+2        & \text{if } x \geq 0 \\
+			      \end{cases}
+		      \]\\
+		      \begin{table}[]
+			      $\displaystyle\lim_{x\to0^{-}}f(x)=2$
+			      \hspace{0.25cm}
+			      $\displaystyle\lim_{x\to0^{+}}f(x)=2$
+		      \end{table}
+		      \vspace*{\fill}
+		      \[\implies\displaystyle\lim_{x\to0}f(x) = \boxed{2}\]
+	\end{enumerate}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\initclock
+	\Large
+	\[\displaystyle\lim_{x\to2}\left(\frac{x+3}{x^2+x-6}\right)\]\\
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\crono
+	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\end{document}
