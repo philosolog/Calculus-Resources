@@ -20,26 +20,32 @@
 	holdot/.style={color=black,fill=white,only marks,mark=*},
 	compat=1.12
 }
-\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcolumntype{Y}{>{\centering\arraybackslash}X} % *: Beamer enumeration spacing-workaround..
+\makeatletter
+\def\@listii{\leftmargin\leftmarginii
+			  \topsep    2ex
+			  \parsep    0\p@   \@plus\p@
+			  \itemsep   \parsep}
+\makeatother
+
 \begin{document}
 \begin{frame}
 	\frametitle{Bellwork 9/12}
 	\vspace*{\fill}
 	\vspace*{\fill}
 	\initclock
+	\large
 	Evaluate without a calculator:\\
 	\vspace*{\fill}
+	\vspace*{\fill}
 	\begin{center}
-		\large
-		\begin{minipage}{0.75\textwidth}
-			\begin{enumerate}
+		\begin{minipage}{0.8\textwidth}
+			\begin{enumerate}\itemsep4ex % *: See line 23.
 				\item $\displaystyle\lim_{x\to3^{-}}\left(\frac{x}{x+3}\right) \text{ and } \displaystyle\lim_{x\to3^{+}}\left(\frac{x}{x+3}\right)$
-				% TODO: Create extra space.
 				\item $\displaystyle\lim_{x\to\pi^{-}}\left[\frac{\cos(x)}{\sin(x)}\right] \text{ and } \displaystyle\lim_{x\to\pi^{+}}\left[\frac{\cos(x)}{\sin(x)}\right]$
 			\end{enumerate}
 		\end{minipage}
 	\end{center}
-	\vspace*{\fill}
 	\vspace*{\fill}
 	\vspace*{\fill}
 	\vspace*{\fill}
@@ -48,7 +54,22 @@
 \end{frame}
 \begin{frame}
 	\frametitle{Bellwork 9/12 - Solutions}
-
+	\begin{center}
+		\begin{minipage}{1\linewidth}
+			\begin{enumerate}
+				\item ~
+				      \begin{enumerate}\itemsep2ex
+					      \item $\displaystyle\lim_{x\to3^{-}}\left(\frac{x}{x+3}\right) = \frac{1}{2}$
+					      \item $\displaystyle\lim_{x\to3^{+}}\left(\frac{x}{x+3}\right) = \frac{1}{2}$
+				      \end{enumerate}
+				\item ~
+				      \begin{enumerate}\itemsep2ex
+					      \item $\displaystyle\lim_{x\to\pi^{-}}\left[\frac{\cos(x)}{\sin(x)}\right] = -\infty$
+					      \item $\displaystyle\lim_{x\to\pi^{+}}\left[\frac{\cos(x)}{\sin(x)}\right] = \infty$
+				      \end{enumerate}
+			\end{enumerate}
+		\end{minipage}
+	\end{center}
 \end{frame}
 \begin{frame}
 	\frametitle{Exercise 1}
@@ -68,7 +89,6 @@
 \begin{frame}
 	\frametitle{Exercise 1 - Solution}
 	\vspace*{\fill}
-	\initclock
 	\Large
 	\[\displaystyle\lim_{x\to2}\left(\frac{x+3}{x^2+x-6}\right) \text{ }\boxed{\text{DNE}}\]\\
 	\small
@@ -82,8 +102,6 @@
 	\end{minipage}\\
 	\vspace*{\fill}
 	\vspace*{\fill}
-	\crono
-	\resetcrono{\beamerbutton{reset}}
 \end{frame}
 \begin{frame}
 	\frametitle{Exercise 2}
@@ -92,7 +110,7 @@
 	\vspace*{\fill}
 	\initclock
 	\Large
-	\[\displaystyle\lim_{x\to2}\left(\frac{x+3}{x^2+x-6}\right)\]\\
+	\[\displaystyle\lim_{x\to1}\left(\frac{x-1}{x^2+3x+2}\right)\]\\
 	\vspace*{\fill}
 	\vspace*{\fill}
 	\vspace*{\fill}
@@ -100,7 +118,11 @@
 	\crono
 	\resetcrono{\beamerbutton{reset}}
 \end{frame}
-
+\begin{frame}
+	\frametitle{Exercise 2 - Solution}
+	\Large
+	\[\displaystyle\lim_{x\to1}\left(\frac{x-1}{x^2+3x+2}\right) = \boxed{0}\]
+\end{frame}
 \begin{frame}
 	\frametitle{Exercise 3}
 	\vspace*{\fill}
@@ -108,7 +130,7 @@
 	\vspace*{\fill}
 	\initclock
 	\Large
-	\[\displaystyle\lim_{x\to2}\left(\frac{x+3}{x^2+x-6}\right)\]\\
+	\[\displaystyle\lim_{h\to0}\left(\frac{\sqrt{4+h}-2}{h}\right)\]\\
 	\vspace*{\fill}
 	\vspace*{\fill}
 	\vspace*{\fill}
@@ -116,7 +138,11 @@
 	\crono
 	\resetcrono{\beamerbutton{reset}}
 \end{frame}
-
+\begin{frame}
+	\frametitle{Exercise 3 - Solution}
+	\Large
+	\[\displaystyle\lim_{h\to0}\left(\frac{\sqrt{4+h}-2}{h}\right) = \boxed{\frac{1}{4}}\]
+\end{frame}
 \begin{frame}
 	\frametitle{Exercise 4}
 	\vspace*{\fill}
@@ -124,7 +150,7 @@
 	\vspace*{\fill}
 	\initclock
 	\Large
-	\[\displaystyle\lim_{x\to2}\left(\frac{x+3}{x^2+x-6}\right)\]\\
+	\[\displaystyle\lim_{h\to0}\left[\frac{(4+h)^2-16}{h}\right]\]\\
 	\vspace*{\fill}
 	\vspace*{\fill}
 	\vspace*{\fill}
@@ -132,20 +158,95 @@
 	\crono
 	\resetcrono{\beamerbutton{reset}}
 \end{frame}
-
+\begin{frame}
+	\frametitle{Exercise 4 - Solution}
+	\Large
+	\[\displaystyle\lim_{h\to0}\left[\frac{(4+h)^2-16}{h}\right] = \boxed{8}\]
+\end{frame}
 \begin{frame}
 	\frametitle{Exercise 5}
-	\vspace*{\fill}
-	\vspace*{\fill}
-	\vspace*{\fill}
 	\initclock
 	\Large
-	\[\displaystyle\lim_{x\to2}\left(\frac{x+3}{x^2+x-6}\right)\]\\
-	\vspace*{\fill}
-	\vspace*{\fill}
+	\begin{center}
+		$f(x) =
+			\begin{cases}
+				x+3   & \text{if } x < 3    \\
+				x^2-2 & \text{if } x \geq 3 \\
+			\end{cases}$\\
+		\vspace*{\fill}
+		\vspace*{\fill}
+		\vspace*{\fill}
+		Find $\displaystyle\lim_{x\to3}f(x)$\\
+	\end{center}
 	\vspace*{\fill}
 	\vspace*{\fill}
 	\crono
 	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 5 - Solution}
+	\large
+	\begin{center}
+		$f(x) =
+			\begin{cases}
+				x+3   & \text{if } x < 3    \\
+				x^2-2 & \text{if } x \geq 3 \\
+			\end{cases}$\\
+		\vspace*{\fill}
+		\vspace*{\fill}
+		\begin{table}[]
+			$\displaystyle\lim_{x\to3^{-}}f(x)=6$
+			\hspace{0.25cm}
+			$\displaystyle\lim_{x\to3^{+}}f(x)=7$
+		\end{table}
+		\vspace*{\fill}
+		\[\implies\displaystyle\lim_{x\to3}f(x) \text{ }\boxed{\text{DNE}}\]
+	\end{center}
+	\vspace*{\fill}
+	\vspace*{\fill}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 6}
+	\initclock
+	\Large
+	\begin{center}
+		$g(x) =
+			\begin{cases}
+				\sqrt{x-2} & \text{if } x \leq 3 \\
+				2x-5       & \text{if } x > 3    \\
+			\end{cases}
+		$\\
+		\vspace*{\fill}
+		\vspace*{\fill}
+		\vspace*{\fill}
+		Find $\displaystyle\lim_{x\to3}g(x)$\\
+	\end{center}
+	\vspace*{\fill}
+	\vspace*{\fill}
+	\crono
+	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 6 - Solution}
+	\large
+	\begin{center}
+		$g(x) =
+			\begin{cases}
+				\sqrt{x-2} & \text{if } x \leq 3 \\
+				2x-5       & \text{if } x > 3    \\
+			\end{cases}
+		$\\
+		\vspace*{\fill}
+		\vspace*{\fill}
+		\begin{table}[]
+			$\displaystyle\lim_{x\to3^{-}}g(x)=1$
+			\hspace{0.25cm}
+			$\displaystyle\lim_{x\to3^{+}}g(x)=1$
+		\end{table}
+		\vspace*{\fill}
+		\[\implies\displaystyle\lim_{x\to3}g(x) = \boxed{1}\]
+	\end{center}
+	\vspace*{\fill}
+	\vspace*{\fill}
 \end{frame}
 \end{document}
