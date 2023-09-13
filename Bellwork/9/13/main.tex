@@ -80,8 +80,8 @@
 	\vspace*{\fill}
 	\initclock
 	\large
-	\begin{minipage}{0.5\textwidth}
-		\begin{center}
+	\begin{minipage}{0.5\textwidth} % TODO: Add equal spacing between the minipages.
+		\begin{center} % Are these redundant?
 			$f(2) = 3$\\
 			$g(2) = -6$\\
 			$h(2) = -3$
@@ -91,7 +91,7 @@
 		\begin{center}
 			$\displaystyle\lim_{x\to2}f(x) = 4$\\
 			$\displaystyle\lim_{x\to2}g(x) = -6$\\
-			$\displaystyle\lim_{x\to7}h(x) = 2$
+			$\displaystyle\lim_{x\to2}h(x) = 2$ % ?: Was it x\to7 or was that a written mistake?
 		\end{center}
 	\end{minipage}\\
 	\vspace*{\fill}
@@ -102,6 +102,15 @@
 	\vspace*{\fill}
 	\crono
 	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1 - Solution}
+	Since all the limits are defined and nonzero, we can directly rewrite the expression and substitute:
+	\[\displaystyle\lim_{x\to2}[h(x)(5f(x)+g(x))]\]
+	\[= \displaystyle\lim_{x\to2}h(x)\cdot\left[5\displaystyle\lim_{x\to2}f(x)+\displaystyle\lim_{x\to2}g(x)\right]\]
+	\[= 2(5\cdot4 - 6)\]
+	\[= \boxed{28}\]
+
 \end{frame}
 \begin{frame}
 	\frametitle{Exercise 2}
@@ -115,5 +124,12 @@
 	\end{center}
 	\crono
 	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2 - Solution}
+
+	\[\displaystyle\lim_{x\to-1}f(x) = 3\]
+	\[\implies\displaystyle\lim_{x\to-1}f[f(x)]\]
+	\[=\]
 \end{frame}
 \end{document}
