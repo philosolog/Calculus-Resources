@@ -13,6 +13,7 @@
 \usepackage{xcolor}
 \usepackage{gensymb}
 \usepackage{pgfplots}
+\usepackage[makeroom]{cancel}
 
 \graphicspath{ {./references/} }
 \pgfplotsset{
@@ -54,7 +55,7 @@
 			\large
 			\item{
 			            \[\displaystyle\lim_{x\to4}\left(\frac{x^2-6x+8}{x-2}\right)\]
-			            \[=\displaystyle\lim_{x\to4}\left[\frac{(x-4)(x-2)}{x-2}\right]\]
+			            \[=\displaystyle\lim_{x\to4}\left[\frac{(x-4)\cancel{(x-2)}}{\cancel{x-2}}\right]\]
 			            \[=\displaystyle\lim_{x\to4}(x-4)\]
 			            \[=\boxed{0}\]
 			      }
@@ -62,11 +63,60 @@
 			\item{
 			            \[\displaystyle\lim_{x\to9}\left(\frac{\sqrt{x}-3}{x-9}\right)\]
 			            \[=\displaystyle\lim_{x\to9}\left[\frac{\sqrt{x}-3}{(\sqrt{x})^2-3^2}\right]\]
-			            \[=\displaystyle\lim_{x\to9}\left[\frac{\sqrt{x}-3}{(\sqrt{x}-3)(\sqrt{x}+3)}\right]\] % Show canceling-out?
+			            \[=\displaystyle\lim_{x\to9}\left[\frac{\cancel{\sqrt{x}-3}}{\cancel{(\sqrt{x}-3)}(\sqrt{x}+3)}\right]\] % ?: Show canceling-out or leave it to be interpreted?
 			            \[=\displaystyle\lim_{x\to9}\left(\frac{1}{\sqrt{x}+3}\right)\]
 			            \[=\boxed{\frac{1}{6}}\]
 			      }
 		\end{enumerate}
 	\end{multicols}
 \end{frame}
+\begin{frame}
+	\frametitle{Exercise 1}
+	Let $g$ and $h$ be the functions defined by: \[g(x) = \sin\left(\frac{\pi}{2}x\right)+4 \text{; } h(x) = -\frac{1}{4}x^3+\frac{3}{4}x+\frac{9}{2}\]\par
+	If a function $f$ satisfies \[g(x)\leq f(x)\leq h(x) \text{ for } -1 < x < 2\text{,}\] what is $\displaystyle\lim_{x\to1}f(x)$?\par
+	\vspace*{\fill}
+	\begin{enumerate}\itemsep1ex
+		\item $4$
+		\item $\frac{9}{2}$
+		\item $5$
+		\item The limit cannot be determined from the information given.
+	\end{enumerate}
+\end{frame}
+% \begin{frame}
+% 	\frametitle{Exercise 1 - Solutions}
+
+% \end{frame}
+\begin{frame}
+	\frametitle{Exercise 2}
+	For all $x\neq0$, let $f$, $g$, and $h$ be the functions: \[f(x) = \frac{1-\cos(x)}{x^2} \text{, } g(x) = x^2\sin\left(\frac{1}{x}\right) \text{, and } h(x) = \frac{\sin(x)}{x}\]\par
+	Which of the following inequalities can be used with the squeeze theorem to find the limit of the function as $x\to0$?\par
+	\vspace*{\fill}
+	\begin{enumerate}\itemsep2ex
+		\item \hfill$\frac{1}{3}(1-x^2) \leq f(x)\leq \frac{1}{2}$\hfill~
+		\item \hfill$-x^2\leq g(x)\leq x^2$\hfill~
+		\item \hfill$-\frac{1}{|x|}\leq h(x)\leq \frac{1}{|x|}$\hfill~
+	\end{enumerate}
+	\vspace*{\fill}
+	(All of the inequalities are true for $x\neq0$.)
+\end{frame}
+% \begin{frame}
+% 	\frametitle{Exercise 2 - Solutions}
+
+% \end{frame}
+\begin{frame}
+	\frametitle{Exercise 3}
+	Let $g$ and $h$ be the functions defined by: \[g(x) = \sin\left[\frac{\pi}{2}(x+2)\right] + 3 \text{; } h(x) = \frac{1}{4}x^3-\frac{3}{2}x^2-\frac{9}{4}x+3\]\par
+	If $f$ is a function that satisfies \[g(x)\leq f(x)\leq h(x) \text{ for } -2 < x < 0\text{,}\]\par
+	what is $\displaystyle\lim_{x\to-1}f(x)$?
+	\begin{enumerate}\itemsep1ex
+		\item $3$
+		\item $3.5$
+		\item $4$
+		\item The limit cannot be determined from the information given.
+	\end{enumerate}
+\end{frame}
+% \begin{frame}
+% 	\frametitle{Exercise 3 - Solutions}
+
+% \end{frame}
 \end{document}
