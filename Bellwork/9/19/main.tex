@@ -1,0 +1,187 @@
+\documentclass[12pt]{beamer}
+\usetheme{Warsaw}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[font=Times,timeinterval=1,timeduration=2.0,timedeath=0,fillcolorwarningsecond=white!60!yellow,timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{gensymb}
+\usepackage{pgfplots}
+\usepackage[makeroom]{cancel}
+
+\graphicspath{ {./references/} }
+\pgfplotsset{
+	soldot/.style={color=black,only marks,mark=*},
+	holdot/.style={color=black,fill=white,only marks,mark=*},
+	compat=1.12
+}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\makeatletter
+\def\@listii{\leftmargin\leftmarginii
+			  \topsep    2ex
+			  \parsep    0\p@   \@plus\p@
+			  \itemsep   \parsep}
+\makeatother
+
+\begin{document}
+\begin{frame}
+	\frametitle{Bellwork 9/19}
+	\initclock
+	\vfill
+	\vfill
+	\vfill
+	\Large
+	Find the values $a$ and $b$ that make $f(x)$ continuous.
+	\[
+		f(x)=\begin{cases}
+			\begin{aligned}[t]
+				ax^2 + b     & \text{ if } x \leq 0     \\
+				bx^2 - x + a & \text{ if } 0 < x \leq 2 \\
+				x + 3b       & \text{ if } x > 2
+			\end{aligned}
+		\end{cases}
+	\]\par
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\small
+	\crono
+	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame}
+	\frametitle{Bellwork 9/19 - Solution}
+	% https://www.desmos.com/calculator/xiebmtic9w
+
+	\large
+	\begin{minipage}{0.5\textwidth}
+		\begin{center}
+			$\begin{aligned}[t]
+				a(0) + b & = b(0) - 0 + a \\
+				b & = a
+			\end{aligned}$
+		\end{center}
+	\end{minipage}%
+	\begin{minipage}{0.5\textwidth}
+		\begin{center}
+			$\begin{aligned}[t]
+				4b - 2 + a & = 2 + 3b\\
+				4 = b + a
+			\end{aligned}$
+		\end{center}
+	\end{minipage}\\
+	\[
+		\implies\begin{aligned}[t]
+			4 & = 2b \\
+			~\\
+			b & = 2 \\
+			a & = 2
+		\end{aligned}
+	\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1}
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	Sketch a function with all of the following properties:\par
+	\vfill
+	\begin{enumerate}\itemsep2ex
+		\item Continuous everywhere except at $x = -1$ and $x = 4$.
+		\item Vertical asymptote at $x = -1$.
+		\item Removable discontinuity at $x = 4$.
+	\end{enumerate}
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2}
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	Sketch a function with all of the following properties:\par
+	\vfill
+	\begin{enumerate}\itemsep2ex
+		\item Continuous on $x > -1$.
+		\item Jump discontinuity at $x = -3$.
+		\item Vertical asymptote at $x = -1$.
+		\item Always positive when $x < 0$.
+	\end{enumerate}
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 3}
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	Sketch a function with all of the following properties:\par
+	\vfill
+	\begin{enumerate}\itemsep2ex
+		\item Neither left nor right continuous at $x = -1$.
+		\item Vertical asymptote at $x = 1$.
+		\item Oscillating discontinuity at $x = 2$.
+		\item Continuous everywhere except at $x = -1\text{, } 1\text{, } 2$.
+	\end{enumerate}
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 4}
+	\Large
+	Where is $h(x) = \ln[1+\sin(x)]$ continuous?
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 4 - Solution}
+	% https://www.desmos.com/calculator/d6cs67vpmn
+
+	\large
+	\[h(x) = \ln[1+\sin(x)]\]\par
+	\vfill
+	\small
+	In this case, $h(x)$ is continuous if the output of $\ln(...)$ is defined.
+	\[
+		\implies\begin{aligned}[t]
+			1+\sin(x) & > 0  \\
+			\sin(x)   & > -1 \\
+		\end{aligned}
+	\]\par
+	Since the range of $\sin(x)$ is $[-1, 1]$, we only need to find $x$ where $\sin(x)=-1$ in order to find where $h(x)$ is undefined.
+	\[
+		\implies\begin{aligned}[t]
+			x \neq 2\pi n - \frac{\pi}{2} \text{ and } x \neq 2\pi n - \frac{3\pi}{2} \text{ where } n\in \mathbb{Z} \\
+		\end{aligned}
+	\]\par
+	Therefore, $h(x)$ is continuous everywhere besides \[x = 2\pi n - \frac{\pi}{2} \text{, } 2\pi n - \frac{3\pi}{2} \text{ where } n\in \mathbb{Z}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 5}
+	\Large
+	Evaluate: \[\displaystyle\lim_{x\to1}\left[\arcsin\left(\frac{1-\sqrt{x}}{1-x}\right)\right]\]\par
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 5 - Solution}
+	Because $\arcsin$ is a continuous function,\par
+	\[\displaystyle\lim_{x\to1}\left[\arcsin\left(\frac{1-\sqrt{x}}{1-x}\right)\right]=\arcsin\left[\displaystyle\lim_{x\to1}\left(\frac{1-\sqrt{x}}{1-x}\right)\right]\]\par
+	\[\arcsin\left[\displaystyle\lim_{x\to1}\left(\frac{1-\sqrt{x}}{1-x}\right)\right]=\arcsin\left\{\displaystyle\lim_{x\to1}\left[\frac{\cancel{1-\sqrt{x}}}{\cancel{(1-\sqrt{x})}(1+\sqrt{x})}\right]\right\}\]\par
+	\[=\arcsin\left[\displaystyle\lim_{x\to1}\left(\frac{1}{1+\sqrt{x}}\right)\right]=\arcsin\left(\frac{1}{2}\right)=\boxed{\frac{\pi}{6}}\]
+\end{frame}
+\end{document}
