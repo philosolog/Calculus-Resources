@@ -43,17 +43,39 @@
 			\end{cases}$ \\
 	\end{center}
 	\vfill
-	Does the Intermediate Value Theorem guarantee a solution to $f(x) = -0.25$ in the interval $(0\text{, } 2)$?\\
+	Does the Intermediate Value Theorem guarantee a solution to $f(x) = -0.25$ in the interval $(0\text{, } 2)$?\par
 	\vfill
-	Why or why not? \\
+	Why or why not?\par
 	\vfill
 	\vfill
 	\crono
 	\resetcrono{\beamerbutton{reset}}
 \end{frame}
 \begin{frame}
-	\frametitle{Bellwork 9/22 - Solution}
+	\frametitle{Bellwork 9/22 - Solution, Part 1}
 
+	\boxed{\text{Yes!..}}%, the IVT does guarantee a value $x$ in $(0\text{, } 2)$ such that $f(x)=-0.25$.\par
+	\vfill
+	In order to use the IVT here, $f$ must be continuous on $[0\text{, } 2]$.\par
+	\vfill
+	Since $2x-3$ and $\cos(\pi x)$ are continuous for all $x$, we just need to test for the continuity of $f$ at $x=1$:\par
+	\[\displaystyle\lim_{x\to1^{-}}f(x)\stackrel{?}{=}\displaystyle\lim_{x\to1^{+}}f(x)\stackrel{?}{=}f(1)\]
+	\[2(1)-3=\cos[\pi(1)]\implies -1=-1\]
+	\[\text{$\therefore$ $f$ is continuous at $x=1$}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Bellwork 9/22 - Solution, Part 2}
+
+	\vfill
+	\vfill
+	\vfill
+	Since $f$ is continuous on $[0\text{, } 2]$, we now check if $-0.25$ is between $f(0)$ and $f(2)$:
+	\[\text{$f(0)=-3$ and $f(2)=1$}\]
+	\vfill
+	Because $f(0) < -0.25 < f(2)$, the IVT guarantees a value $x$ in $(0\text{, } 2)$ such that $f(x)=-0.25$.
+	\vfill
+	\vfill
+	\vfill
 \end{frame}
 \begin{frame}
 	\frametitle{Exercise 1}
@@ -69,6 +91,14 @@
 \begin{frame}
 	\frametitle{Exercise 1 - Solutions}
 
+	\begin{enumerate}\itemsep2ex
+		\item{
+		            $\displaystyle\lim_{x\to\infty}\left(\frac{3x^3-7}{2x^3-x+1}\right)=\displaystyle\lim_{x\to\infty}\left(\frac{\frac{3\cancel{x^3}}{\cancel{x^3}}-\frac{7}{x^3}}{\frac{2\cancel{x^3}}{\cancel{x^3}}-\frac{x}{x^3}+\frac{1}{x^3}}\right)\newline=\displaystyle\lim_{x\to\infty}\left(\frac{3-\frac{7}{x^3}}{2-\frac{1}{x^2}+\frac{1}{x^3}}\right)=\frac{3-0}{2-0+0}=\boxed{\frac{3}{2}}$
+		      }
+		\item{
+		            $\displaystyle\lim_{x\to\infty}\left(\frac{3x^2-7}{2x^3-x+1}\right)=\displaystyle\lim_{x\to\infty}\left(\frac{\frac{3x^2}{x^3}-\frac{7}{x^3}}{\frac{2\cancel{x^3}}{\cancel{x^3}}-\frac{x}{x^3}+\frac{1}{x^3}}\right)\newline=\displaystyle\lim_{x\to\infty}\left(\frac{\frac{3}{x}-\frac{7}{x^3}}{2-\frac{1}{x^2}+\frac{1}{x^3}}\right)=\frac{0-0}{2-0+0}=\boxed{0}$
+		      }
+	\end{enumerate}
 \end{frame}
 \begin{frame}
 	\frametitle{Exercise 2}
@@ -83,6 +113,9 @@
 \begin{frame}
 	\frametitle{Exercise 2 - Solution}
 
+	\Large
+	\[\displaystyle\lim_{x\to-\infty}\left[\frac{1+e^x\sin(x)}{e^{x-1}-1}\right]=\frac{1+0}{0-1}\]
+	\[=\frac{1}{-1}=\boxed{-1}\]
 \end{frame}
 \begin{frame}
 	\frametitle{Exercise 3}
@@ -97,5 +130,8 @@
 \begin{frame}
 	\frametitle{Exercise 3 - Solution}
 
+	\large
+	\[\displaystyle\lim_{x\to\infty}\left(\frac{3^x+2}{e^{2x}+1}\right)=\displaystyle\lim_{x\to\infty}\left(\frac{\frac{3^x}{e^{2x}}+\frac{2}{e^{2x}}}{\frac{\cancel{e^{2x}}}{\cancel{e^{2x}}}+\frac{1}{e^{2x}}}\right)\]
+	\[=\displaystyle\lim_{x\to\infty}\left[\frac{\left(\frac{3}{e^2}\right)^x+\frac{2}{e^{2x}}}{1+\frac{1}{e^{2x}}}\right]=\frac{0+0}{1+0}=\boxed{0}\]
 \end{frame}
 \end{document}
