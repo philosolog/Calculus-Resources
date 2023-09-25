@@ -1,0 +1,132 @@
+\documentclass[12pt]{beamer}
+\usetheme{Warsaw}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[font=Times,timeinterval=1,timeduration=2.0,timedeath=0,fillcolorwarningsecond=white!60!yellow,timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{gensymb}
+\usepackage{pgfplots}
+\usepackage[makeroom]{cancel}
+
+\graphicspath{ {./references/} }
+\pgfplotsset{
+	soldot/.style={color=black,only marks,mark=*},
+	holdot/.style={color=black,fill=white,only marks,mark=*},
+	compat=1.12
+}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\makeatletter
+\def\@listii{\leftmargin\leftmarginii
+			  \topsep    2ex
+			  \parsep    0\p@   \@plus\p@
+			  \itemsep   \parsep}
+\makeatother
+
+\begin{document}
+\begin{frame}
+	\frametitle{Bellwork 9/25}
+
+	\Large
+	\initclock
+	\vfill
+	Find the limits:\par
+	\large
+	\vfill
+	\vfill
+	\begin{enumerate}\itemsep2ex
+		\item $\displaystyle\lim_{x\to \infty}\left(\frac{3x^2-x+1}{4x-2}\right)$
+		\item $\displaystyle\lim_{x\to -\infty}\left(\frac{2x+1}{3x+1}\right)$
+		\item $\displaystyle\lim_{x\to -\infty}\left(\frac{6x^3+7x+3}{5x^4+6x^2+2x}\right)$
+	\end{enumerate}
+	\vfill
+	\vfill
+	\vfill
+	\crono
+	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame}
+	\frametitle{Bellwork 9/25 - Solution, Part 1}
+
+	\Large
+	\[\displaystyle\lim_{x\to \infty}\left(\frac{3x^2-x+1}{4x-2}\right)=\displaystyle\lim_{x\to \infty}\left(\frac{3x-\frac{1\cancel{x}}{\cancel{x}}+\frac{1}{x}}{\frac{4\cancel{x}}{\cancel{x}}-\frac{2}{x}}\right)\]
+	\[=\displaystyle\lim_{x\to \infty}\left(\frac{3x-1+\frac{1}{x}}{4-\frac{2}{x}}\right)=\frac{3(\infty)-1+0}{4-0}=\boxed{\infty}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Bellwork 9/25 - Solution, Part 2}
+
+	\Large
+	\[\displaystyle\lim_{x\to -\infty}\left(\frac{2x+1}{3x+1}\right)=\displaystyle\lim_{x\to -\infty}\left(\frac{\frac{2\cancel{x}}{\cancel{x}}+\frac{1}{x}}{\frac{3\cancel{x}}{\cancel{x}}+\frac{1}{x}}\right)\]
+	\[=\displaystyle\lim_{x\to -\infty}\left(\frac{2+\frac{1}{x}}{3+\frac{1}{x}}\right)=\frac{2+0}{3+0}=\boxed{\frac{2}{3}}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Bellwork 9/25 - Solution, Part 3}
+
+	\large
+	\[\displaystyle\lim_{x\to -\infty}\left(\frac{6x^3+7x+3}{5x^4+6x^2+2x}\right)=\displaystyle\lim_{x\to -\infty}\left(\frac{\frac{6x^3}{x^4}+\frac{7x}{x^4}+\frac{3}{x^4}}{\frac{5\cancel{x^4}}{\cancel{x^4}}+\frac{6x^2}{x^4}+\frac{2x}{x^4}}\right)\]
+	\[=\displaystyle\lim_{x\to -\infty}\left(\frac{\frac{6}{x}+\frac{7}{x^3}+\frac{3}{x^4}}{5+\frac{6}{x^2}+\frac{2}{x^3}}\right)=\frac{0+0+0}{5+0+0}=\boxed{0}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1}
+
+	\Large
+	Find the limits: \\
+	\vfill
+	\begin{enumerate}\itemsep4ex
+		\item $\displaystyle\lim_{x\to\infty}\left(\frac{3x^3-7}{2x^3-x+1}\right)$
+		\item $\displaystyle\lim_{x\to\infty}\left(\frac{3x^2-7}{2x^3-x+1}\right)$
+	\end{enumerate}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1 - Solutions}
+
+	\begin{enumerate}\itemsep2ex
+		\item{
+		            $\displaystyle\lim_{x\to\infty}\left(\frac{3x^3-7}{2x^3-x+1}\right)=\displaystyle\lim_{x\to\infty}\left(\frac{\frac{3\cancel{x^3}}{\cancel{x^3}}-\frac{7}{x^3}}{\frac{2\cancel{x^3}}{\cancel{x^3}}-\frac{x}{x^3}+\frac{1}{x^3}}\right)\newline=\displaystyle\lim_{x\to\infty}\left(\frac{3-\frac{7}{x^3}}{2-\frac{1}{x^2}+\frac{1}{x^3}}\right)=\frac{3-0}{2-0+0}=\boxed{\frac{3}{2}}$
+		      }
+		\item{
+		            $\displaystyle\lim_{x\to\infty}\left(\frac{3x^2-7}{2x^3-x+1}\right)=\displaystyle\lim_{x\to\infty}\left(\frac{\frac{3x^2}{x^3}-\frac{7}{x^3}}{\frac{2\cancel{x^3}}{\cancel{x^3}}-\frac{x}{x^3}+\frac{1}{x^3}}\right)\newline=\displaystyle\lim_{x\to\infty}\left(\frac{\frac{3}{x}-\frac{7}{x^3}}{2-\frac{1}{x^2}+\frac{1}{x^3}}\right)=\frac{0-0}{2-0+0}=\boxed{0}$
+		      }
+	\end{enumerate}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2}
+
+	\Large
+	Find the limit: \\
+	\vfill
+	\[\displaystyle\lim_{x\to-\infty}\left[\frac{1+e^x\sin(x)}{e^{x-1}-1}\right]\]
+	\vfill
+	\vfill
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2 - Solution}
+
+	\Large
+	\[\displaystyle\lim_{x\to-\infty}\left[\frac{1+e^x\sin(x)}{e^{x-1}-1}\right]=\frac{1+0}{0-1}\]
+	\[=\frac{1}{-1}=\boxed{-1}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 3}
+
+	\Large
+	Find the limit: \\
+	\vfill
+	\[\displaystyle\lim_{x\to\infty}\left(\frac{3^x+2}{e^{2x}+1}\right)\]
+	\vfill
+	\vfill
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 3 - Solution}
+
+	\large
+	\[\displaystyle\lim_{x\to\infty}\left(\frac{3^x+2}{e^{2x}+1}\right)=\displaystyle\lim_{x\to\infty}\left(\frac{\frac{3^x}{e^{2x}}+\frac{2}{e^{2x}}}{\frac{\cancel{e^{2x}}}{\cancel{e^{2x}}}+\frac{1}{e^{2x}}}\right)\]
+	\[=\displaystyle\lim_{x\to\infty}\left[\frac{\left(\frac{3}{e^2}\right)^x+\frac{2}{e^{2x}}}{1+\frac{1}{e^{2x}}}\right]=\frac{0+0}{1+0}=\boxed{0}\]
+\end{frame}
+\end{document}
