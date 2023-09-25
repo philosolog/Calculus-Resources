@@ -97,7 +97,10 @@
 	\small
 	\[\implies f'(4)=\displaystyle\lim_{x\to4}\left(\frac{\sqrt{2x+1}-\sqrt{2\cdot4+1}}{x-4}\right)\]
 	\[=\displaystyle\lim_{x\to4}\left(\frac{\sqrt{2x+1}-3}{x-4}\right)=\displaystyle\lim_{x\to4}\left[\frac{(\sqrt{2x+1}-3)}{(x-4)}\cdot \frac{(\sqrt{2x+1}+3)}{(\sqrt{2x+1}+3)}\right]\]
-	\[=\displaystyle\lim_{x\to4}\left[\frac{2x+1-9}{(x-4)\sqrt{2x+1}+3x-12}\right]\]
+	\tiny
+	\[=\displaystyle\lim_{x\to4}\left[\frac{2x+1-9}{(x-4)\sqrt{2x+1}+3(x-4)}\right]=\displaystyle\lim_{x\to4}\left[\frac{2\cancel{(x-4)}}{\cancel{(x-4)}\sqrt{2x+1}+3\cancel{(x-4)}}\right]\]
+	\small
+	\[=\displaystyle\lim_{x\to4}\left[\frac{2}{\sqrt{2x+1}+3}\right]=\displaystyle\lim_{x\to4}\left[\frac{2}{\sqrt{2x+1}+3}\right]=\boxed{\frac{1}{3}}\]
 	\vfill
 \end{frame}
 \end{document}
