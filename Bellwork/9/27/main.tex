@@ -1,0 +1,122 @@
+\documentclass[12pt]{beamer}
+\usetheme{Warsaw}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[font=Times,timeinterval=1,timeduration=2.0,timedeath=0,fillcolorwarningsecond=white!60!yellow,timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{gensymb}
+\usepackage{pgfplots}
+\usepackage[makeroom]{cancel}
+
+\graphicspath{ {./references/} }
+\pgfplotsset{
+	soldot/.style={color=black,only marks,mark=*},
+	holdot/.style={color=black,fill=white,only marks,mark=*},
+	compat=1.12
+}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\makeatletter
+\def\@listii{\leftmargin\leftmarginii
+			  \topsep    2ex
+			  \parsep    0\p@   \@plus\p@
+			  \itemsep   \parsep}
+\makeatother
+
+\begin{document}
+\begin{frame}
+	\frametitle{Bellwork 9/27}
+	\initclock
+
+	\large
+	\vfill
+	\vfill
+	Find $f'(3)$ if $f(x)=x^3$.\par
+	\vfill
+	Use $f'(a) = \displaystyle\lim_{x\to a}\left[\frac{f(x)-f(a)}{x-a}\right]$\par
+	\vfill
+	Recall: $z^3-y^3=(z-y)(z^2+zy+y^2)$\par
+	\vfill
+	\vfill
+	\vfill
+
+	\small
+	\crono
+	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame}
+	\frametitle{Bellwork 9/27 - Solution}
+
+	\large
+	\[f'(3) = \displaystyle\lim_{x\to 3}\left[\frac{f(x)-f(3)}{x-3}\right]\]
+	\[=\displaystyle\lim_{x\to 3}\left(\frac{x^3-3^3}{x-3}\right)\]
+	\[=\displaystyle\lim_{x\to 3}\left[\frac{\cancel{(x-3)}(x^2+3x+9)}{\cancel{x-3}}\right]\]
+	\[=\displaystyle\lim_{x\to 3}\left(x^2+3x+9\right)=\boxed{27}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1}
+
+	\large
+	\vfill
+	\vfill
+	\[f(x)=x^2+x\].\par
+
+	\begin{enumerate}\itemsep1ex
+		\item Find $f'(x)$\par
+		\item Where does $f'(x)=0$?\par
+		\item What is the equation of the tangent line at that point?\par
+	\end{enumerate}
+	\vfill
+	\vfill
+	\vfill
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1 - Solutions, Part 1}
+
+	\large
+	\[f'(x) = \displaystyle\lim_{h\to 0}\left[\frac{(x+h)^2+x+h-(x^2+x)}{h}\right]\]
+	\[=\displaystyle\lim_{h\to 0}\left(\frac{x^2+2xh+h^2+x+h-x^2-x}{h}\right)\]
+	\[=\displaystyle\lim_{h\to 0}\left(\frac{2xh+h^2+h}{h}\right)=\displaystyle\lim_{h\to 0}\left(2x+h+1\right)\]
+	\[\implies\boxed{f'(x)=2x+1}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1 - Solutions, Part 2}
+
+	\[f'(x)=0\implies 2x+1=0\]
+	\[\boxed{x=-\frac{1}{2}}\text{ or }\boxed{\text{at the point }\left(-\frac{1}{2}, -\frac{1}{4}\right)}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1 - Solutions, Part 3}
+
+	Equation of a line $g$:\par
+	\begin{center}
+		$g(x) = y = mx + b$ where $m$ is the slope and $b$ is the y-intercept.
+	\end{center}
+	\[f'(x)=0\implies m=0\]
+	\[\implies y = b\]
+	Since we have that $\left(-\frac{1}{2}, -\frac{1}{4}\right)$ lies on $f(x)$,\par
+	\[b = -\frac{1}{4}\implies\boxed{y = -\frac{1}{4}}\text{ or }\boxed{g(x) = -\frac{1}{4}}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2}
+
+	\Large
+	\begin{center}
+		Find $f'(x)$ if $f(x) = \sqrt{2x+1}$
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2 - Solution}
+
+	\[f'(x) = \displaystyle\lim_{h\to 0}\left[\frac{\sqrt{2(x+h)+1}-\sqrt{2x+1}}{h}\right]\]
+	\[=\displaystyle\lim_{h\to 0}\left[\frac{\sqrt{2(x+h)+1}-\sqrt{2x+1}}{h}\cdot\frac{\sqrt{2(x+h)+1}+\sqrt{2x+1}}{\sqrt{2(x+h)+1}+\sqrt{2x+1}}\right]\]
+	\[=\displaystyle\lim_{h\to 0}\left\{\frac{2x+2h+1-2x-1}{h[\sqrt{2(x+h)+1}+\sqrt{2x+1}]}\right\}\]
+	\[=\displaystyle \lim_{{h\to0}}\left[\frac{2\cancel{h}}{\cancel{h}(\sqrt{2(x+h)+1}+\sqrt{2x+1})}\right]=\boxed{\frac{1}{\sqrt{2x+1}}}\]
+\end{frame}
+\end{document}
