@@ -31,16 +31,21 @@
 
 \begin{document}
 \begin{frame}
-	\frametitle{Bellwork 10/3}
+	\frametitle{Bellwork 10/17}
 	\initclock
 
-	\large
 	\vfill
 	\vfill
-	A particle moves along the $x$-axis. Its position can be described by the equation: \[x(t)=t^2+t\]
-	Find $a(t)$ or $x''(t)$, the function that describes the acceleration of this particle.\par
 	\vfill
-	\[\text{Recall: } x'(t)=\displaystyle\lim_{h\to 0}\left[\frac{x(t+h)-x(t)}{h}\right]\]
+	\vfill
+	\Large
+	Find the equation of the tangent line to $f(x)=x^3+x^2e^x$ at $x=-1$.\par
+	\vfill
+	\vfill
+	Recall: $(uv)'=uv'+vu'$
+	\vfill
+	\vfill
+	\vfill
 	\vfill
 	\vfill
 
@@ -49,104 +54,61 @@
 	\resetcrono{\beamerbutton{reset}}
 \end{frame}
 \begin{frame}
-	\frametitle{Bellwork 10/3 - Solution}
+	\frametitle{Bellwork 10/17 - Solution}
 
-	\large
-	\[v(t)=\displaystyle\lim_{h\to 0}\left[\frac{(t+h)^2+(t+h)-(x^2+x)}{h}\right]=2t+1\]
-	\[\implies a(t)=v'(t)=\displaystyle\lim_{h\to 0}\left[\frac{2(t+h)+1-(2t+1)}{h}\right]\]
-	\[\implies \boxed{a(t)=2}\]
+	\Large
+	\[f'(x) = 3x^2 + 2xe^x + x^2e^x\]
+	\vfill
+	\[\text{Point-Slope Form: }y-f(-1)=f'(-1)(x+1)\]
+	\[y = \left(3-\frac{2}{e}+\frac{1}{e}\right)(x+1)+\left(-1+\frac{1}{e}\right)\]
+	\[\boxed{y = \left(\frac{3e-1}{e}\right)x+2}\] % *: "Rise-Over-Run" format for viewing the slope.
+	\vfill
 \end{frame}
 \begin{frame}
 	\frametitle{Exercise 1}
 
-	\large
-	A particle moves along the $x$-axis. Its position can be modeled by: \[x(t)=t^3-3t^2-9t-1\]
-	\vfill
-	\Large
-	\begin{enumerate}\itemsep2ex
-		\item When is the particle moving to the right?
-		\item When is the particle moving to the left?
-	\end{enumerate}
+	\LARGE
+	Find $\frac{\mathrm{d}y}{\mathrm{d}x}$: \[y=\frac{3x^2+2}{3x^2+4}\]
 \end{frame}
 \begin{frame}
-	\frametitle{Exercise 1 - Solutions}
+	\frametitle{Exercise 1 - Solution}
 
-	First, we find where the particle changes directions:\par
-	\[v(t)=3t^2-6t-9=0\]
-	\[\implies 3(t-2t-3)=0\]
-	\[\implies t=-1,3\]
-	\vfill
-	Next, we test $t$ in $(-\infty, -1)$, $(-1, 3)$, and $(3, \infty)$ to get:\par
-	\vfill
-	\small
-	\begin{enumerate}
-		\item The particle is $\boxed{\text{moving to the right when }t<-1\text{ or }t>3}$.
-		\item The particle is $\boxed{\text{moving to the left when }-1<t<3}$.
-	\end{enumerate}
+	\large
+	\[\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{(\cancel{3x^2}+4)(6x)-(\cancel{3x^2}+2)(6x)}{(3x^2+4)^2}\]
+	\[\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{(2)(6x)}{(3x^2+4)^2}\]
+	\[\boxed{\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{12x}{(3x^2+4)^2}}\]
 \end{frame}
 \begin{frame}
 	\frametitle{Exercise 2}
 
-	From Exercise 1:\par
-	\[x(t)=t^3-3t^2-9t-1\]
-	\[v(t)=3t^2-6t-9\]
-	The particle is moving to the right when $t<-1$ or $t>3$.\par
-	The particle is moving to the left when $-1<t<3$.\par
-	\vfill
-	\vfill
-	\large
-	When is the particle..\par
-	\vfill
-	\begin{enumerate}\itemsep2ex
-		\item Speeding up?
-		\item Slowing down?
-	\end{enumerate}
-	\vfill
+	\LARGE
+	Find $y'$: \[y=\frac{2e^x+1}{x^2+x}\]
 \end{frame}
 \begin{frame}
-	\frametitle{Exercise 2 - Solutions, Part 1}
+	\frametitle{Exercise 2 - Solution}
 
-	\large
-	The particle is speeding up when its velocity and acceleration have the same sign. It is slowing down when the particle's velocity and acceleration have opposite signs.\par
-\end{frame}
-\begin{frame}
-	\frametitle{Exercise 2 - Solutions, Part 2}
-
-	We have found:\par
-	\begin{center}
-		$v(t)>1$ if $t<-1$ or $t>3$, and $v(t)<1$ if $-1<t<3$
-	\end{center}
-	\vfill
-	Now, we must find where $a(t)$ changes signs:\par
-	\[a(t)=6t-6=0\]
-	\[\implies 6(t-1)=0\implies t=1\]
-	Then, we test values for $t<1$ and $t>1$, so:\par
-	\begin{center}
-		$a(t)>1$ if $t>1$, and $a(t)<1$ if $t<1$
-	\end{center}
-	The particle $\boxed{\text{is speeding up when }-1<t<1\text{ or }t>3}$ and $\boxed{\text{slowing down when }t<-1\text{ or }1<t<3}$.
+	\Large
+	\[y'=\frac{(x^2+x)(2e^x)-(2e^x+1)(2x+1)}{(x^2+x)^2}\]
+	\[\boxed{y'=\frac{2x^2e^x-2xe^x-2e^x-2x-1}{(x^2+x)^2}}\]
 \end{frame}
 \begin{frame}
 	\frametitle{Exercise 3}
 
-	\large
-	Another particle moves along the $x$-axis. Its position can be described by the following: \[x(t)=e^t-t\]
+	\LARGE
+	\[f(x)=\frac{x^4}{e^x-x}-x\]
 	\vfill
-	When is the particle moving to the right? Left?
-	\vfill
-	\vfill
+	Find the equation of the tangent line to $f$ at $x=1$.
 \end{frame}
 \begin{frame}
-	\frametitle{Exercise 3 - Solutions}
+	\frametitle{Exercise 3 - Solution}
 
-	Find $t$ where $v(t)=0$:\par
-	\[v(t)=e^t-1=0\]
-	\[\implies e^t=1\]
-	\[\implies t=0\]
+	\large
+	\[f'(x)=\frac{(e^x-x)(4x^3)-(x^4)(e^x-1)}{(e^x-x)^2}-1\]
 	\vfill
-	Now, we find the sign of $v(t)$ for $t<0$ and $t>0$:
-	\[v(-1)=e^{-1}-1<0\]
-	\[v(1)=e^{1}-1>0\]
-	$\therefore$ the particle moves $\boxed{\text{to the right when }t>0}$, and $\boxed{\text{to the left when }t<0}$.
+	\[\text{Point-Slope Form: }y-f(1)=f'(1)(x-1)\]
+	\[y=\left[\frac{(e-1)(4)-(e-1)}{(e-1)^2}-1\right](x-1)+\frac{1}{e-1}-1\]
+	\[\boxed{y=\left(\frac{4-e}{e-1}\right)x-\frac{2}{e-1}}\]
+	\vfill
+	\vfill
 \end{frame}
 \end{document}
