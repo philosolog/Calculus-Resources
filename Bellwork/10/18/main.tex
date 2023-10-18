@@ -1,0 +1,103 @@
+\documentclass[12pt]{beamer}
+\usetheme{Warsaw}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[font=Times,timeinterval=1,timeduration=2.0,timedeath=0,fillcolorwarningsecond=white!60!yellow,timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{textcomp, gensymb}
+\usepackage{pgfplots}
+\usepackage[makeroom]{cancel}
+
+\graphicspath{ {./references/} }
+\pgfplotsset{
+	soldot/.style={color=black,only marks,mark=*},
+	holdot/.style={color=black,fill=white,only marks,mark=*},
+	compat=1.12
+}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\makeatletter
+\def\@listii{\leftmargin\leftmarginii
+			  \topsep    2ex
+			  \parsep    0\p@   \@plus\p@
+			  \itemsep   \parsep}
+\makeatother
+
+\begin{document}
+\begin{frame}
+	\frametitle{Bellwork 10/18}
+	\initclock
+
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\Large
+	Find the equation for the line tangent to $f(x)=\frac{e^x}{x}$ at $x = 3$.
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+
+	\small
+	\crono
+	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame}
+	\frametitle{Bellwork 10/18 - Solution}
+
+	\large
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\[f'(x)=\frac{xe^x-e^x}{x^2}\]
+	\vfill
+	\[\text{Point-Slope Form: }y-f(3)=f'(3)(x-3)\]
+	\[y=\left(\frac{3e^3-e^3}{9}\right)(x-3)+\frac{e^3}{3}\]
+	\[\boxed{y=\left(\frac{2e^3}{9}\right)x-\frac{e^3}{3}}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1}
+
+	
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1 - Solution}
+
+	
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2}
+
+	
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2 - Solution}
+
+	
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 3}
+
+	
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 3 - Solution}
+
+	
+\end{frame}
+\end{document}
