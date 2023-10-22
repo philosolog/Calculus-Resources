@@ -1,0 +1,114 @@
+\documentclass[12pt]{beamer}
+\usetheme{Warsaw}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[font=Times,timeinterval=1,timeduration=2.0,timedeath=0,fillcolorwarningsecond=white!60!yellow,timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{textcomp, gensymb}
+\usepackage{pgfplots}
+\usepackage[makeroom]{cancel}
+
+\graphicspath{ {./references/} }
+\pgfplotsset{
+	soldot/.style={color=black,only marks,mark=*},
+	holdot/.style={color=black,fill=white,only marks,mark=*},
+	compat=1.12
+}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\makeatletter
+\def\@listii{\leftmargin\leftmarginii
+			  \topsep    2ex
+			  \parsep    0\p@   \@plus\p@
+			  \itemsep   \parsep}
+\makeatother
+
+\begin{document}
+\begin{frame}
+	\frametitle{Bellwork 10/17}
+	\initclock
+
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\Large
+	Find the equation of the tangent line to $f(x)=x^3+x^2e^x$ at $x=-1$.\par
+	\vfill
+	\vfill
+	Recall: $(uv)'=uv'+vu'$
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+
+	\small
+	\crono
+	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame}
+	\frametitle{Bellwork 10/17 - Solution}
+
+	\Large
+	\[f'(x) = 3x^2 + 2xe^x + x^2e^x\]
+	\vfill
+	\[\text{Point-Slope Form: }y-f(-1)=f'(-1)(x+1)\]
+	\[y = \left(3-\frac{2}{e}+\frac{1}{e}\right)(x+1)+\left(-1+\frac{1}{e}\right)\]
+	\[\boxed{y = \left(\frac{3e-1}{e}\right)x+2}\] % *: "Rise-Over-Run" format for viewing the slope.
+	\vfill
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1}
+
+	\LARGE
+	Find $\frac{\mathrm{d}y}{\mathrm{d}x}$: \[y=\frac{3x^2+2}{3x^2+4}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1 - Solution}
+
+	\large
+	\[\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{(\cancel{3x^2}+4)(6x)-(\cancel{3x^2}+2)(6x)}{(3x^2+4)^2}\]
+	\[\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{(2)(6x)}{(3x^2+4)^2}\]
+	\[\boxed{\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{12x}{(3x^2+4)^2}}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2}
+
+	\LARGE
+	Find $y'$: \[y=\frac{2e^x+1}{x^2+x}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2 - Solution}
+
+	\Large
+	\[y'=\frac{(x^2+x)(2e^x)-(2e^x+1)(2x+1)}{(x^2+x)^2}\]
+	\[\boxed{y'=\frac{2x^2e^x-2xe^x-2e^x-2x-1}{(x^2+x)^2}}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 3}
+
+	\LARGE
+	\[f(x)=\frac{x^4}{e^x-x}-x\]
+	\vfill
+	Find the equation of the tangent line to $f$ at $x=1$.
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 3 - Solution}
+
+	\large
+	\[f'(x)=\frac{(e^x-x)(4x^3)-(x^4)(e^x-1)}{(e^x-x)^2}-1\]
+	\vfill
+	\[\text{Point-Slope Form: }y-f(1)=f'(1)(x-1)\]
+	\[y=\left[\frac{(e-1)(4)-(e-1)}{(e-1)^2}-1\right](x-1)+\frac{1}{e-1}-1\]
+	\[\boxed{y=\left(\frac{4-e}{e-1}\right)x-\frac{2}{e-1}}\]
+	\vfill
+	\vfill
+\end{frame}
+\end{document}
