@@ -1,0 +1,104 @@
+\documentclass[12pt]{beamer}
+\usetheme{Warsaw}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[font=Times,timeinterval=1,timeduration=2.0,timedeath=0,fillcolorwarningsecond=white!60!yellow,timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{textcomp, gensymb}
+\usepackage{pgfplots}
+\usepackage[makeroom]{cancel}
+
+\graphicspath{ {./references/} }
+\pgfplotsset{
+	soldot/.style={color=black,only marks,mark=*},
+	holdot/.style={color=black,fill=white,only marks,mark=*},
+	compat=1.12
+}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\makeatletter
+\def\@listii{\leftmargin\leftmarginii
+			  \topsep    2ex
+			  \parsep    0\p@   \@plus\p@
+			  \itemsep   \parsep}
+\makeatother
+\newcommand\at[2]{\left.#1\right|_{#2}}
+
+\begin{document}
+\begin{frame}
+	\frametitle{Bellwork 10/25}
+	\initclock
+
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\Large
+	Find $\frac{\mathrm{d}y}{\mathrm{d}x}$ of the implicitly defined curve:
+	\[x^3+xy^2+y=x^2y\]
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+
+	\small
+	\crono
+	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame}
+	\frametitle{Bellwork 10/25 - Solution}
+
+	\large
+	\[3x^2+y^2+2xy\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)+\frac{\mathrm{d}y}{\mathrm{d}x}=2xy+x^2\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)\]
+	\[(2xy+1-x^2)\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)=2xy-3x^2-y^2\]
+	\[\boxed{\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{2xy-3x^2-y^2}{2xy+1-x^2}}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1}
+
+	\large
+	Find the equations of the lines tangent to the ellipse below, at $x=-2$: \[\frac{x^{2}}{8}+\frac{y^{2}}{4}=1\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1 - Solution, Part 1}
+
+	Find $\frac{\mathrm{d}y}{\mathrm{d}x}$:
+	\[\frac{x}{4}+\frac{y}{2}\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)=0\]
+	\[\frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{x}{2y}\]
+	Find the $y_0$ values (when $x=-2$):
+	\[y_0=\pm\sqrt{4\left[1-\frac{(-2)^2}{8}\right]}=\pm\sqrt{2}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1 - Solution, Part 2}
+
+	\[\text{Point-Slope Form: }y\pm\sqrt{2}=\at{\frac{\mathrm{d}y}{\mathrm{d}x}}{-2}(x+2)\]
+	\[\implies \boxed{y=\frac{1}{\sqrt{2}}(x+2)+\sqrt{2}}\text{; }\boxed{y=-\frac{1}{\sqrt{2}}(x+2)-\sqrt{2}}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2}
+
+	\large
+	Find the equation of the line tangent to the hyperbola below, at $(2, 2)$: \[\frac{y^{2}}{2}-\frac{x^{2}}{4}=1\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2 - Solution}
+
+	Find $\frac{\mathrm{d}y}{\mathrm{d}x}$:
+	\[y\left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)-\frac{x}{2}=0\]
+	\[\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{x}{2y}\]
+	\vfill
+	\hrule
+	\vfill
+	\[\text{Point-Slope Form: }y-2=\at{\frac{\mathrm{d}y}{\mathrm{d}x}}{2}(x-2)\]
+	\[\implies \boxed{y=\frac{1}{2}(x-2)+2}\]
+\end{frame}
+\end{document}
