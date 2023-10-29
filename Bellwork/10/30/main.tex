@@ -1,0 +1,97 @@
+\documentclass[12pt]{beamer}
+\usetheme{Warsaw}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[font=Times,timeinterval=1,timeduration=2.0,timedeath=0,fillcolorwarningsecond=white!60!yellow,timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{textcomp, gensymb}
+\usepackage{pgfplots}
+\usepackage[makeroom]{cancel}
+
+\graphicspath{ {./references/} }
+\pgfplotsset{
+	soldot/.style={color=black,only marks,mark=*},
+	holdot/.style={color=black,fill=white,only marks,mark=*},
+	compat=1.12
+}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\makeatletter
+\def\@listii{\leftmargin\leftmarginii
+			  \topsep    2ex
+			  \parsep    0\p@   \@plus\p@
+			  \itemsep   \parsep}
+\makeatother
+\newcommand\at[2]{\left.#1\right|_{#2}}
+
+\begin{document}
+\begin{frame}
+	\frametitle{Bellwork 10/30}
+	\initclock
+
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\Large
+	\[f(x)=\ln\left(x^{2}+1\right)\]
+	\vfill
+	\large
+	\begin{center}
+		Find the equation of the line tangent to $f$ at $x=-1$.
+	\end{center}
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+
+	\small
+	\crono
+	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame}
+	\frametitle{Bellwork 10/30 - Solution}
+
+	\vfill
+	\vfill
+	\vfill
+	\Large
+	\[f'(x)=\frac{2x}{x^2+1}\]
+	\vfill
+	\large
+	\[\text{Point-Slope Form: }y-f(-1)=f'(-1)(x+1)\]
+	\[\implies \boxed{y=-x-1+\ln(2)}\]
+	\vfill
+	\vfill
+	\vfill
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1}
+
+
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1 - Solution}
+
+
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2}
+
+
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2 - Solution}
+
+
+\end{frame}
+\end{document}
