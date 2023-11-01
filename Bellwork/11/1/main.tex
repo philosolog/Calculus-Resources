@@ -1,0 +1,104 @@
+\documentclass[12pt]{beamer}
+\usetheme{Warsaw}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[font=Times,timeinterval=1,timeduration=2.0,timedeath=0,fillcolorwarningsecond=white!60!yellow,timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{textcomp, gensymb}
+\usepackage{pgfplots}
+\usepackage[makeroom]{cancel}
+
+\graphicspath{ {./references/} }
+\pgfplotsset{
+	soldot/.style={color=black,only marks,mark=*},
+	holdot/.style={color=black,fill=white,only marks,mark=*},
+	compat=1.12
+}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\makeatletter
+\def\@listii{\leftmargin\leftmarginii
+			  \topsep    2ex
+			  \parsep    0\p@   \@plus\p@
+			  \itemsep   \parsep}
+\makeatother
+\newcommand\at[2]{\left.#1\right|_{#2}}
+
+\begin{document}
+\begin{frame}
+	\frametitle{Bellwork 11/1}
+	\initclock
+
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\large
+	Suppose $y=\sqrt{e^x}$, where $x$ and $y$ are functions of $t$.
+	\vfill
+	\begin{enumerate}\itemsep2ex
+		\item If $\frac{\mathrm{d}y}{\mathrm{d}t} = 1$, find $\frac{\mathrm{d}x}{\mathrm{d}t}$ when $x=0$.
+		\item If $\frac{\mathrm{d}x}{\mathrm{d}t} = 1$, find $\frac{\mathrm{d}y}{\mathrm{d}t}$ when $x=\ln(4)$.
+	\end{enumerate}
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+
+	\small
+	\crono
+	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame}
+	\frametitle{Bellwork 11/1 - Solution}
+
+	\large
+	Differentiate:
+	\[\frac{\mathrm{d}y}{\mathrm{d}t}=\frac{e^x}{2\sqrt{e^x}}\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)\implies \frac{\mathrm{d}y}{\mathrm{d}t}=\frac{\sqrt{e^x}}{2}\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)\]
+	Substitute:
+	\begin{enumerate}\itemsep2ex
+		\item $1=\frac{1}{2}\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)\implies \boxed{\frac{\mathrm{d}x}{\mathrm{d}t}=2}$
+		\item $\frac{\mathrm{d}y}{\mathrm{d}t}=\frac{\sqrt{e^{\ln(4)}}}{2}=\frac{\sqrt{4}}{2}\implies \boxed{\frac{\mathrm{d}y}{\mathrm{d}t}=1}$
+	\end{enumerate}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1}
+
+	\vfill
+	\vfill
+	\vfill
+	\Large
+	Suppose $6x^2+5y^2=30$, where $x$ and $y$ are functions of $t$.
+	\vfill
+	\large
+	\begin{enumerate}\itemsep2ex
+		\item If $\frac{\mathrm{d}y}{\mathrm{d}t} = \frac{1}{2}$, find $\frac{\mathrm{d}x}{\mathrm{d}t}$ when $x=5$ and $y=12$.
+		\item If $\frac{\mathrm{d}x}{\mathrm{d}t} = -\frac{1}{4}$, find $\frac{\mathrm{d}y}{\mathrm{d}t}$ when $x=10$ and $y=3$.
+	\end{enumerate}
+	\vfill
+	\vfill
+	\vfill
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1 - Solution}
+
+	Implicitly Differentiate:
+	\[12x\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)+10y\left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)=0\]
+	\[\frac{\mathrm{d}y}{\mathrm{d}t}=-\frac{6x}{5y}\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)\]
+	Substitute:
+	\large
+	\begin{enumerate}\itemsep1ex
+		\item $\frac{1}{2}=\left[-\frac{6(5)}{5(12)}\right]\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)\implies \boxed{\frac{\mathrm{d}x}{\mathrm{d}t}=-1}$
+		\item $\frac{\mathrm{d}y}{\mathrm{d}t}=-\frac{6(10)}{5(3)}\left(-\frac{1}{4}\right)\implies \boxed{\frac{\mathrm{d}y}{\mathrm{d}t}=1}$
+	\end{enumerate}
+\end{frame}
+\end{document}
