@@ -1,0 +1,103 @@
+\documentclass[12pt]{beamer}
+\usetheme{Warsaw}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[font=Times,timeinterval=1,timeduration=2.0,timedeath=0,fillcolorwarningsecond=white!60!yellow,timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{textcomp, gensymb}
+\usepackage{pgfplots}
+\usepackage[makeroom]{cancel}
+
+\graphicspath{ {./references/} }
+\pgfplotsset{
+	soldot/.style={color=black,only marks,mark=*},
+	holdot/.style={color=black,fill=white,only marks,mark=*},
+	compat=1.12
+}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\makeatletter
+\def\@listii{\leftmargin\leftmarginii
+			  \topsep    2ex
+			  \parsep    0\p@   \@plus\p@
+			  \itemsep   \parsep}
+\makeatother
+\newcommand\at[2]{\left.#1\right|_{#2}}
+
+\begin{document}
+\begin{frame}
+	\frametitle{Bellwork 11/3}
+	\initclock
+
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\Large
+	Suppose $y=3^{x\ln(x)}$, where $x$ and $y$ are functions of $t$.
+	\vfill
+	\vfill
+	If $\frac{\mathrm{d}x}{\mathrm{d}t} = \frac{1}{\ln(3)}$, find $\frac{\mathrm{d}y}{\mathrm{d}t}$ when $x=1$.
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+
+	\small
+	\crono
+	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame}
+	\frametitle{Bellwork 11/3 - Solution, Part 1}
+
+	\large
+	Logarithmic Differentiation:
+	\[\ln(y)=x\ln(x)\ln(3)\]
+	\[\frac{1}{y}\left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)=\ln(3)[\ln(x)+1]\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)\]
+	\[\frac{\mathrm{d}y}{\mathrm{d}t}=y\ln(3)[\ln(x)+1]\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)\]
+	\[\frac{\mathrm{d}y}{\mathrm{d}t}=\ln(3)\left[3^{x\ln(x)}\right][\ln(x)+1]\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)\]
+\end{frame}
+\begin{frame}
+	\frametitle{Bellwork 11/3 - Solution, Part 2}
+
+	\large
+	Substitute:
+	\[\frac{\mathrm{d}y}{\mathrm{d}t}=\ln(3)\left[3^{(1)\ln(1)}\right][\ln(1)+1]\left[\frac{1}{\ln(3)}\right]\]
+	\[\boxed{\frac{\mathrm{d}y}{\mathrm{d}t}=1}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1}
+
+	\vfill
+	\vfill
+	\vfill
+	\Large
+	A particle's motion can be described by the following elliptical equation: \[x^2+xy+y^2=4\]
+	When the particle is at $(-2,0)$, $\frac{\mathrm{d}x}{\mathrm{d}t}=-3$.
+	\vfill
+	Find $\frac{\mathrm{d}y}{\mathrm{d}t}$.
+	\vfill
+	\vfill
+	\vfill
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1 - Solution}
+
+	\large
+	Implicitly Differentiate:
+	\[2x\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)+y\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)+x\left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)+2y\left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)=0\]
+	\[\frac{\mathrm{d}y}{\mathrm{d}t}=\frac{-2x-y}{x+2y}\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)\]
+	Substitute:
+	\[\frac{\mathrm{d}y}{\mathrm{d}t}=\frac{4}{-2}(-3)\]
+	\[\boxed{\frac{\mathrm{d}y}{\mathrm{d}t}=6}\]
+\end{frame}
+\end{document}
