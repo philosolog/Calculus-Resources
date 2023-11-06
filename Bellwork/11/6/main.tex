@@ -1,0 +1,109 @@
+\documentclass[12pt]{beamer}
+\usetheme{Warsaw}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[font=Times,timeinterval=1,timeduration=2.0,timedeath=0,fillcolorwarningsecond=white!60!yellow,timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{textcomp, gensymb}
+\usepackage{pgfplots}
+\usepackage[makeroom]{cancel}
+
+\graphicspath{ {./references/} }
+\pgfplotsset{
+	soldot/.style={color=black,only marks,mark=*},
+	holdot/.style={color=black,fill=white,only marks,mark=*},
+	compat=1.12
+}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\makeatletter
+\def\@listii{\leftmargin\leftmarginii
+			  \topsep    2ex
+			  \parsep    0\p@   \@plus\p@
+			  \itemsep   \parsep}
+\makeatother
+\newcommand\at[2]{\left.#1\right|_{#2}}
+
+\begin{document}
+\begin{frame}
+	\frametitle{Bellwork 11/6}
+	\initclock
+
+	\vfill
+	\vfill
+	\vfill
+	\Large
+	A particle's motion can be described by the following elliptical equation: \[2x^2+xy+2y^2=8\]
+	When the particle is at $(-1,0)$, $\frac{\mathrm{d}x}{\mathrm{d}t}=4$.
+	\vfill
+	Find $\frac{\mathrm{d}y}{\mathrm{d}t}$.
+	\vfill
+	\vfill
+	\vfill
+
+	\small
+	\crono
+	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame}
+	\frametitle{Bellwork 11/6 - Solution}
+
+	Implicitly Differentiate:
+	\[4x\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)+y\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)+x\left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)+4y\left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)=0\]
+	\[\frac{\mathrm{d}y}{\mathrm{d}t}=\frac{-4x-y}{x+4y}\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)\]
+	Substitute:
+	\[\at{\frac{\mathrm{d}x}{\mathrm{d}t}}{-1}=\left(\frac{4}{-1}\right)\left(4\right)\]
+	\[\boxed{\at{\frac{\mathrm{d}x}{\mathrm{d}t}}{-1}=-16}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1}
+
+	Find the linear approximation of the function $f(x)=\sqrt{1+x}$ at $x=3$ and use it to approximate the numbers $\sqrt{3}$ and $\sqrt{5}$.
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1 - Solution, Part 1}
+
+	\large
+	\[f(x)=\sqrt{1+x}\implies \sqrt{3}=\sqrt{1+2}\text{ and }\sqrt{5}=\sqrt{1+4}\]
+	\[f'(x)=\frac{1}{2\sqrt{1+x}}\]
+	\vfill
+	Use the equation of the line tangent to $f$ at $x=3$:
+	\[g(x)=f'(3)(x-3)+f(3)\]
+	\[g(x)=\frac{1}{4}(x-3)+2\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1 - Solution, Part 2}
+
+	\large
+	Since $f(x)\approx g(x)$, we find $g(2)$ and $g(4)$:
+	\[f(2)\approx g(2)\implies f(2)\approx \frac{1}{4}(-1)+2\implies \boxed{f(2)\approx 1.75}\]
+	\[f(4)\approx g(4)\implies f(4)\approx \frac{1}{4}(1)+2\implies \boxed{f(4)\approx 2.25}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2}
+
+	\Large
+	\begin{center}
+		Estimate $e^{0.75}$ using linear approximation.
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2 - Solution}
+
+	\[f(x)=e^{1-x^2}\implies e^{0.75}=e^{1-0.5^2}=f(0.5)\]
+	\[f'(x)=-2e^{1-x^2}x\]
+	\vfill
+	Use the equation of the line tangent to $f$ at $x=1$:
+	\[g(x)=f'(1)(x-1)+f(1)\]
+	\[g(x)=-2(x-1)+1\]
+	Since $f(0.5)\approx g(0.5)$:
+	\[f(0.5)\approx -2(0.5-1)+1\]
+	\[\boxed{f(0.5)\approx 2}\]
+\end{frame}
+\end{document}
