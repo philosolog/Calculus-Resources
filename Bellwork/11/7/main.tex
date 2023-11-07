@@ -1,0 +1,126 @@
+\documentclass[12pt]{beamer}
+\usetheme{Warsaw}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[font=Times,timeinterval=1,timeduration=2.0,timedeath=0,fillcolorwarningsecond=white!60!yellow,timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{textcomp, gensymb}
+\usepackage{pgfplots}
+\usepackage[makeroom]{cancel}
+
+\graphicspath{ {./references/} }
+\pgfplotsset{
+	soldot/.style={color=black,only marks,mark=*},
+	holdot/.style={color=black,fill=white,only marks,mark=*},
+	compat=1.12
+}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\makeatletter
+\def\@listii{\leftmargin\leftmarginii
+			  \topsep    2ex
+			  \parsep    0\p@   \@plus\p@
+			  \itemsep   \parsep}
+\makeatother
+\newcommand\at[2]{\left.#1\right|_{#2}}
+
+\begin{document}
+\begin{frame}
+	\frametitle{Bellwork 11/7}
+	\initclock
+
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\large
+	Function $g$ is differentiable.\par
+	\vfill
+	If $g(3)=2$ and $g'(3)=-\frac{3}{4}$, estimate $g(2.6)$ using a line tangent to $g$ at $x=3$.\par
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+
+	\small
+	\crono
+	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame}
+	\frametitle{Bellwork 11/7 - Solution}
+
+	Find the tangent line:
+	\[\text{Point-Slope Form: }h(x)-g(3)=g'(3)(x-3)\]
+	\[h(x)=-\frac{3}{4}(x-3)+2\]
+	Use linear approximation:
+	\[g(2.6)\approx h(2.6)\implies \boxed{g(2.6)\approx -\frac{3}{4}(-0.4)+2\approx 2.3}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1}
+
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\Large
+	\[f(x)=x^2-x^3\]
+	\vfill
+	\large
+	\begin{center}
+		Find the absolute extrema of $f$ for $x\in [-1,1]$.
+	\end{center}
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1 - Solution}
+
+	Find where critical points occur:
+	\[f'(x)=2x-3x^2=0\]
+	\[2x=3x^2\implies x=0\text{, }\frac{2}{3}\]
+	Test the candidates:
+	\[x=-1\text{, }0\text{, }\frac{2}{3}\text{, }1\]
+	\[f(-1)=2\text{; }f(0)=0\text{; }f\left(\frac{2}{3}\right)=\frac{4}{27}\text{; }f(1)=0\]
+	\[\implies \boxed{\text{Absolute Maximum: }2\text{; }\text{Absolute Minimum: }0}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2}
+
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\Large
+	\[h(t)=\frac{1}{e^{t^2}}\]
+	\vfill
+	\large
+	\begin{center}
+		Find the absolute extrema of $h$ for $t\in [-1,1]$.
+	\end{center}
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2 - Solution}
+
+	Find where critical points occur:
+	\[h'(t)=-2e^{-t^2}t=0\]
+	\[e^{-t^2}t=0\implies x=0\]
+	Test the candidates:
+	\[x=-1\text{, }0\text{, }\frac{2}{3}\text{, }1\]
+	\[f(-1)=\frac{1}{e}\text{; }f(0)=1\text{; }f(1)=\frac{1}{e}\]
+	\[\implies \boxed{\text{Absolute Maximum: }1\text{; }\text{Absolute Minimum: }\frac{1}{e}}\]
+\end{frame}
+\end{document}
