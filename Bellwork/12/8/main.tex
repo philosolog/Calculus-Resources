@@ -1,0 +1,77 @@
+\documentclass[12pt]{beamer}
+\usetheme{Warsaw}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[font=Times,timeinterval=1,timeduration=2.0,timedeath=0,fillcolorwarningsecond=white!60!yellow,timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{textcomp, gensymb}
+\usepackage{pgfplots}
+\usepackage[makeroom]{cancel}
+
+\graphicspath{ {./references/} }
+\pgfplotsset{
+	soldot/.style={color=black,only marks,mark=*},
+	holdot/.style={color=black,fill=white,only marks,mark=*},
+	compat=1.12
+}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\makeatletter
+\def\@listii{\leftmargin\leftmarginii
+			  \topsep    2ex
+			  \parsep    0\p@   \@plus\p@
+			  \itemsep   \parsep}
+\makeatother
+\newcommand\at[2]{\left.#1\right|_{#2}}
+
+\begin{document}
+\begin{frame}
+	\frametitle{Bellwork 12/18}
+	\initclock
+
+	\vfill
+	\LARGE
+	\[f(x)=\ln(x)+2\]
+	\vfill
+	\begin{center}
+		Find $(f^{-1})^{'}(2)$.
+	\end{center}
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+
+	\small
+	\crono
+	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1}
+
+	\Large
+	Find the general antiderivative of $f$:
+	\[f(x)=\frac{1}{5}-\frac{2}{x}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2}
+
+	\Large
+	Find the general antiderivative of $g$:
+	\[g(t)=\frac{3t^4-t^3+4}{t^4}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 3}
+
+	\Large
+	Find the general antiderivative of $h$:
+	\[h(s)=\frac{1+s^2+s}{\sqrt{s}}\]
+\end{frame}
+\end{document}
