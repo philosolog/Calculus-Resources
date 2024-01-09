@@ -1,0 +1,136 @@
+\documentclass[12pt]{beamer}
+\usetheme{Warsaw}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[font=Times,timeinterval=1,timeduration=2.0,timedeath=0,fillcolorwarningsecond=white!60!yellow,timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{textcomp, gensymb}
+\usepackage{pgfplots}
+\usepackage[makeroom]{cancel}
+
+\graphicspath{ {./references/} }
+\pgfplotsset{
+	soldot/.style={color=black,only marks,mark=*},
+	holdot/.style={color=black,fill=white,only marks,mark=*},
+	compat=1.12
+}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\makeatletter
+\def\@listii{\leftmargin\leftmarginii
+			  \topsep    2ex
+			  \parsep    0\p@   \@plus\p@
+			  \itemsep   \parsep}
+\makeatother
+\newcommand\at[2]{\left.#1\right|_{#2}}
+
+\begin{document}
+\begin{frame}
+	\frametitle{Bellwork 1/9}
+	\initclock
+
+	\vfill
+	\vfill
+	\large
+	Let $\int_{0}^{3}[4f(x)+2]dx=18$ and $\int_{3}^{6}f(x)dx=-1$.
+	\vfill
+	Find:
+	\Large
+	\begin{enumerate}\itemsep2ex
+		\item $\int_{0}^{3}f(x)dx$
+		\item $\int_{6}^{0}f(x)dx$
+	\end{enumerate}
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+
+	\small
+	\crono
+	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame}
+	\frametitle{Bellwork 1/9 - Solution, Part 1}
+
+	\large
+	\begin{align*}
+		\int_{0}^{3}[4f(x)+2]dx               & = 18 \\
+		4\int_{0}^{3}f(x)dx + 2\int_{0}^{3}dx & = 18 \\
+		4\int_{0}^{3}f(x)dx + 6               & = 18
+	\end{align*}
+	\begin{center}
+		$\implies \boxed{\int_{0}^{3}f(x)dx = 3}$
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Bellwork 1/9 - Solution, Part 2}
+
+	\begin{align*}
+		\int_{6}^{0}f(x)dx &= -\int_{0}^{6}f(x)dx \\
+		&= -\left[\int_{0}^{3}f(x)dx + \int_{3}^{6}f(x)dx\right]
+	\end{align*}
+	\vfill
+	\hrule
+	\vfill
+	\[\int_{0}^{3}f(x)dx=3\text{; }\int_{3}^{6}f(x)dx=-1\]
+	\[\implies \boxed{\int_{6}^{0}f(x)dx = -3 + 1 = -2}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1}
+
+	\vfill
+	\vfill
+	\Large
+	\[f(x)=\int_{1}^{x}\ln(1+t^2)dt\]
+	\vfill
+	\begin{center}
+		Find $f'(x)$ using part 1 of the FTC.
+	\end{center}
+	\vfill
+	\vfill
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1 - Solution}
+
+	\vfill
+	\Large
+	\begin{align*}
+		f(x)           & = \int_{1}^{x}\ln(1+t^2)dt                               \\
+		\implies f'(x) & = \frac{\mathrm{d}}{\mathrm{d}x}\int_{1}^{x}\ln(1+t^2)dt
+	\end{align*}
+	\vfill
+	\[\text{FTC 1}\implies \boxed{f'(x) = \ln(1+x^2)}\]
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2}
+
+	\vfill
+	\vfill
+	\Large
+	\[h(t)=\int_{2}^{t}\frac{s}{s^4+1}ds\]
+	\vfill
+	\begin{center}
+		Find $h'(t)$ using part 1 of the FTC.
+	\end{center}
+	\vfill
+	\vfill
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2 - Solution}
+
+	\vfill
+	\Large
+	\begin{align*}
+		h(t)           & = \int_{2}^{t}\frac{s}{s^4+1}ds                               \\
+		\implies h'(t) & = \frac{\mathrm{d}}{\mathrm{d}t}\int_{2}^{t}\frac{s}{s^4+1}ds
+	\end{align*}
+	\vfill
+	\[\text{FTC 1}\implies \boxed{h'(t) = \frac{t}{t^4+1}}\]
+\end{frame}
+\end{document}
