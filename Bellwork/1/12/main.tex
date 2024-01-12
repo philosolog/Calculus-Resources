@@ -29,6 +29,10 @@
 			  \itemsep   \parsep}
 \makeatother
 \newcommand\at[2]{\left.#1\right|_{#2}}
+\setlength{\abovedisplayskip}{-15pt}
+\setlength{\belowdisplayskip}{0pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
 
 \begin{document}
 \begin{frame}
@@ -43,6 +47,8 @@
 	\vfill
 	\[\int (2+\tan^2\theta)d\theta\]
 	\vfill
+	\large
+	\[\text{Hint: }1+\tan^2\theta=\sec^2\theta\]
 	\vfill
 	\vfill
 	\vfill
@@ -52,29 +58,94 @@
 	\crono
 	\resetcrono{\beamerbutton{reset}}
 \end{frame}
-\begin{frame} 
+\begin{frame}
 	\frametitle{Bellwork 1/12 - Solution}
 
-	
+	\Large
+	\begin{align*}
+		\int (2+\tan^2\theta)d\theta&=\int (1 + \sec^2\theta)d\theta \\
+		&=\int d\theta + \int \sec^2\theta d\theta\\
+		&=\boxed{\theta + \tan\theta + C}
+	\end{align*}
 \end{frame}
 \begin{frame}
 	\frametitle{Exercise 1}
 
-	
+	\large
+	The velocity function $\left(\text{in }\frac{\text{m}}{\text{s}}\right)$ is given for a particle moving along a line. \\
+	\[v(t)=6t-5\text{; }0\leq t\leq 5\]
+	\vfill
+	For the given $t$ interval, find the particle's:
+	\begin{enumerate}
+		\item Displacement
+		\item Distance Traveled
+	\end{enumerate}
 \end{frame}
 \begin{frame}
-	\frametitle{Exercise 1 - Solution}
+	\frametitle{Exercise 1 - Solution: Displacement}
 
-	
+	\large
+	\begin{align*}
+		\int_{0}^{5}v(t)dt &= s(5)-s(0)=\Delta s=\text{displacement}\\
+		\implies \Delta s &= \int_{0}^{5}6t-5dt\\
+		&= 6\int_{0}^{5}tdt-5\int_{0}^{5}dt\\
+		&= 3[t^2]_0^5-5[t]_0^5\\
+		&= \boxed{50\text{ meters}}
+	\end{align*}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1 - Solution: Distance Traveled}
+
+	Find where $v(t)$ changes sign:
+	\begin{align*}
+		v(t)=6t-5&=0\\
+		\implies t&=\frac{5}{6}
+	\end{align*}
+	Create the integral:
+	\begin{align*}
+		\int_{0}^{5}|v(t)|dt&=\left|\int_{0}^{\frac{5}{6}}6t-5dt\right|+\left|\int_{\frac{5}{6}}^{5}6t-5dt\right|\\
+		&= \left|[3t^2-5t]_0^\frac{5}{6}\right|+\left|[3t^2-5t]_\frac{5}{6}^5\right|\\
+		&= \boxed{\frac{325}{6}=54.1\overline{6}\text{ meters}}
+	\end{align*}
 \end{frame}
 \begin{frame}
 	\frametitle{Exercise 2}
 
-	
+	\large
+	The velocity function $\left(\text{in }\frac{\text{m}}{\text{s}}\right)$ is given for a particle moving along a line. \\
+	\[v(t)=6t^2+2t-4\text{; }0\leq t\leq 4\]
+	\vfill
+	For the given $t$ interval, find the particle's:
+	\begin{enumerate}
+		\item Displacement
+		\item Distance Traveled
+	\end{enumerate}
 \end{frame}
 \begin{frame}
-	\frametitle{Exercise 2 - Solution}
+	\frametitle{Exercise 2 - Solution: Displacement}
 
-	
+	\large
+	\begin{align*}
+		\int_{0}^{4}v(t)dt &= s(4)-s(0)=\Delta s=\text{displacement}\\
+		\implies \Delta s &= \int_{0}^{4}6t^2+2t-4dt\\
+		&= 6\int_{0}^{4}t^2dt+2\int_{0}^{4}tdt-4\int_{0}^{4}dt\\
+		&= 2[t^3]_0^4+[t^2]_0^4-4[t]_0^4\\
+		&= \boxed{128\text{ meters}}
+	\end{align*}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2 - Solution: Distance Traveled, Part 1}
+
+	Find where $v(t)$ changes sign:
+	\begin{align*}
+		v(t)=6t^2+2t-4&=0\\
+		\implies t&=\cancel{-1}\text{, }\frac{2}{3}\text{ ($t\in [0,4]$)}
+	\end{align*}
+	Create the integral:
+	\begin{align*}
+		\int_{0}^{5}|v(t)|dt&=\left|\int_{0}^{\frac{2}{3}}6t^2+2t-4dt\right|+\left|\int_{\frac{2}{3}}^{4}6t^2+2t-4dt\right|\\
+		&= \left|[2t^3+t^2-4t]_0^\frac{2}{3}\right|+\left|[2t^3+t^2-4t]_\frac{2}{3}^4\right|\\
+		&= \boxed{\frac{3544}{27}\approx131.259\text{ meters}}
+	\end{align*}
 \end{frame}
 \end{document}
