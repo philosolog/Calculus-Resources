@@ -1,0 +1,86 @@
+\documentclass[12pt]{beamer}
+\usetheme{Warsaw}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[font=Times,timeinterval=1,timeduration=2.0,timedeath=0,fillcolorwarningsecond=white!60!yellow,timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{textcomp, gensymb}
+\usepackage{pgfplots}
+\usepackage[makeroom]{cancel}
+
+\graphicspath{ {./references/} }
+\pgfplotsset{
+	soldot/.style={color=black,only marks,mark=*},
+	holdot/.style={color=black,fill=white,only marks,mark=*},
+	compat=1.12
+}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\makeatletter
+\def\@listii{\leftmargin\leftmarginii
+			  \topsep    2ex
+			  \parsep    0\p@   \@plus\p@
+			  \itemsep   \parsep}
+\makeatother
+\newcommand\at[2]{\left.#1\right|_{#2}}
+
+\begin{document}
+\begin{frame}
+	\frametitle{Bellwork 1/12}
+	\initclock
+
+	\vfill
+	\vfill
+	\vfill
+	\Large
+	Find the general indefinite integral:
+	\vfill
+	\[\int (2+\tan^2\theta)d\theta\]
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+	\vfill
+
+	\small
+	\crono
+	\resetcrono{\beamerbutton{reset}}
+\end{frame}
+\begin{frame} 
+	\frametitle{Bellwork 1/12 - Solution}
+
+	\large
+	\begin{align*}
+		\int_{0}^{4}(4-t)\sqrt{t}dt &= 4\int_{0}^{4}\sqrt{t}dt-\int_{0}^{4}t^\frac{3}{2}dt \\
+		&= \frac{8}{3}\left[t^\frac{3}{2}\right]_0^4 - \frac{2}{5}\left[t^\frac{5}{2}\right]_0^4 \\
+		&= \frac{8}{3}\left(4^\frac{3}{2}\right) - \frac{2}{5}\left(4^\frac{5}{2}\right) \\
+		&= \boxed{\frac{128}{15}}
+	\end{align*}
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1}
+
+	
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 1 - Solution}
+
+	
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2}
+
+	
+\end{frame}
+\begin{frame}
+	\frametitle{Exercise 2 - Solution}
+
+	
+\end{frame}
+\end{document}
