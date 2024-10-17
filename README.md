@@ -1,5 +1,5 @@
 
-<center>
+<div align="center">
 	<img src="assets/logo.png" alt="logo" width="200" height="auto" />
 	<h1>Calculus Resources</h1>
 		<p>
@@ -22,7 +22,7 @@
 	<p>
 	Check out the <a href="">website</a> I made to help navigate my slides.
 	</p>
-</center>
+</div>
 
 ### Included topics:
 - 
