@@ -25,4 +25,7 @@
 </div>
 
 ### Included topics:
-- 
+- Limits
+- Functions
+- Derivatives
+- Definite & Indefinite Integrals
