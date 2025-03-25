@@ -1,6 +1,6 @@
 
 <div align="center">
-	<img src="assets/logo.png" alt="logo" width="200" height="auto" />
+<!-- 	<img src="assets/logo.png" alt="logo" width="200" height="auto" /> -->
 	<h1>Calculus Resources</h1>
 	<p>
 		<a href="">
@@ -17,15 +17,9 @@
 		</a>
 	</p>
 	<p>
-		Here, you can find practice problems and notes slides for various introductory differential and integral calculus topics I've typeset during my time as a teaching assistant for a high school calculus class.
+		Here, you can find practice problems and notes slides for various introductory differential and integral calculus topics I've typeset as a teaching assistant for a high school calculus class.
 	</p>
-	<p>
+<!-- 	<p>
 	Check out the <a href="">website</a> I made to help navigate my slides.
-	</p>
+	</p> -->
 </div>
-
-### Included topics:
-- Limits
-- Functions
-- Derivatives
-- Definite & Indefinite Integrals
